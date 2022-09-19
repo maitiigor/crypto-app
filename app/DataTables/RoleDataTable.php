@@ -2,11 +2,11 @@
 
 namespace App\DataTables;
 
-use App\Models\Contact;
+use Spatie\Permission\Models\Role;
 use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
 
-class ContactDataTable extends DataTable
+class RoleDataTable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -18,16 +18,16 @@ class ContactDataTable extends DataTable
     {
         $dataTable = new EloquentDataTable($query);
      
-        return $dataTable->addColumn('action', 'pages.contacts.datatables_actions');
+        return $dataTable->addColumn('action', 'pages.roles.datatables_actions');
     }
 
     /**
      * Get query source of dataTable.
      *
-     * @param \App\Models\Deposit $model
+     * @param \App\Models\Role $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function query(Contact $model)
+    public function query(Role $model)
     {
        
         return $model->newQuery();
@@ -66,8 +66,7 @@ class ContactDataTable extends DataTable
     {
         return [
             'name',
-            'email',
-            'subject',
+           
         ];
     }
 

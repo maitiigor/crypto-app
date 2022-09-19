@@ -48,14 +48,43 @@ main {
 .cps-nav-sidebar-hide{
     position: absolute;
     border-radius: 2em;
-    margin-left: -15em;
+    left: -6.3em;
     padding: 2em 0em 2em 0em;
     background-color: #0d42b2;
     color: #ffff;
     transition: all 0.2s;
     height: 100%; 
     z-index: 1000;
+    
 }
+.nav-icon{
+    color: #ffff;
+    margin-right: 1em;   
+ }
+
+.cps-nav-sidebar-hide .nav-icon{
+    color: #fff;
+    margin-right: 0; 
+    float: right;
+    padding-right: 10px;
+  
+}
+.cps-nav-sidebar-hide .fa-chevron-left{
+    display: none;
+}
+
+.cps-nav-sidebar-hide li {
+    padding-right: 5px;
+    padding-top: 10px;
+}
+
+.cps-nav-sidebar-hide li span{
+    display: none;   
+ }
+
+
+
+
 
 @media only screen and (max-width: 768px) {
     .cps-nav-sidebar-hide{
@@ -77,8 +106,29 @@ main {
         list-style: none;
         color: #ffff;
         margin-top: 1em;
-        margin-bottom: 1em;
+        display: block;
+       
     }
+
+    .cps-nav-sidebar-hide .nav-icon{
+        color: #fff;
+        margin-right: 2em; 
+        float: left;
+      
+    }
+
+    .cps-nav-sidebar-hide li span{
+       display: inline;   
+    }
+    .cps-nav-sidebar-hide .fa-chevron-left{
+        display: inline;
+    }
+    
+    .cps-nav-sidebar-hide li {
+        padding-right: 5px;
+        padding-top: 1px;
+    }
+    
 
     .cps-nav-sidebar-hide li a{
         color: #ffff;
@@ -109,14 +159,12 @@ body {
 .cps-nav-sidebar ul li{
     list-style: none;
     color: #ffff;
+    display: block;
     margin-top: 0.6em;
     margin-bottom: 0.6em;
  }
 
- .nav-icon{
-    color: #ffff;
-    margin-right: 1em;
- }
+ 
 
 .cps-nav-sidebar a{
     text-decoration: none;

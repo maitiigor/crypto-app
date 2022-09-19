@@ -8,12 +8,12 @@
                     WELCOME TO
                 </h1>
                 <div class="text-center" style="color: orange; font-weight: bolder">
-                    CIMISHFX-INVESTMENT
+                    TradeFund-INVESTMENT
                 </div>
                 <div class="my-4" style="color: #d3dcf3">
                     <h4>Daily Profit + Principal Return</h4>
                     <p>
-                        TrustFund is a officially registered company at Germany Securities & Investments
+                        TradeFund is a officially registered company at Germany Securities & Investments
                         Commissions performing Trading in Crypto Currenices with a holder name of AKA Traders PTY LTD. OUR
                         Company Germany Business Number is # 31642821082. We believe in hedge funds investments doing p2p
                         trading and generating profits together.
@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="col-lg-6 ">
-                <a href="" class="custom-button">Get Started</a>
+                <a href="{{route('register')}}" class="custom-button">Get Started</a>
                 <span style="font-size: 12px; color: #96a1c2;">NO CREDIT CARD REQUIRED</span>
             </div>
         </div>
@@ -83,7 +83,7 @@
                     Check out our latest Investment Packages
                 </h2>
                 <p class="" style="color: #96a1c2">
-                    TrustFund Team understands the security and safety of there investors funds That's why we are
+                    TradeFund Team understands the security and safety of there investors funds That's why we are
                     offering New range of Investment Packages with 100% Principal Return
                 </p>
 
@@ -241,7 +241,7 @@
             <div class="col-lg-12">
                 <h2 class="text-center">
                     WHY CHOOSE<br>
-                    TrustFund
+                    TradeFund
                 </h2>
 
             </div>
@@ -289,7 +289,7 @@
                             </h3>
                             <p>
                                 You can access real-time reporting on your investment manager's performance in the
-                                TrustFund Dashboard
+                                TradeFund Dashboard
                             </p>
 
                         </div>
@@ -481,7 +481,7 @@
                     </div>
                     <h3>Crypto Investment</h3>
                     <h6 class="px-4" style="line-height: 1.5">
-                        At TrustFund.com, we are poised to take our investors to a higher level of financial
+                        At TradeFund.com, we are poised to take our investors to a higher level of financial
                         independence. We achieve these with an array of carefully planned investment plans that suite all
                         pocket sizes
                     </h6>
@@ -506,7 +506,7 @@
                     </div>
                     <h3>Crypto Investment</h3>
                     <h6 class="px-4" style="line-height: 1.5">
-                        At TrustFund.com, we are poised to take our investors to a higher level of financial
+                        At TradeFund.com, we are poised to take our investors to a higher level of financial
                         independence. We achieve these with an array of carefully planned investment plans that suite all
                         pocket sizes
                     </h6>

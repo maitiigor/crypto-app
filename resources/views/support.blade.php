@@ -19,7 +19,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8 text-center px-2">
                 <h2>
-                    Contact Support@cimish-investment.com
+                    Contact Support@tradefund.com
                 </h2>
                 <p class="px-5" style="font-size: 18px">
                     You have questions in your mind? Contact us right now so we can figure out what problem you are having. We will love to help you.

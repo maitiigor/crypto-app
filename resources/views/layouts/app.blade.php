@@ -109,7 +109,7 @@
                   
                 </div>  
                 <div class="text-center align-bottom; py-2">
-                    &copy; trustfund.com
+                    &copy; Tradefund.com
                 </div> 
             </main>
            

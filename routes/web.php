@@ -48,7 +48,7 @@ Route::middleware('auth')->group(function () {
         Route::resource('payment_methods', \App\Http\Controllers\PaymentMethodController::class);
         Route::resource('users', \App\Http\Controllers\UserController::class);
         Route::resource('deposits', \App\Http\Controllers\DepositController::class);
-
+        Route::resource('roles', \App\Http\Controllers\RoleController::class);
     });
 });
 

@@ -34,15 +34,15 @@ $current_user = auth()->user();
         <li>
             <a href="{{ route('profile') }}">
                 <i class="fa fa-list nav-icon"></i>
-                Account
+               <span>Account</span> 
             </a>
 
         </li>
         @if ($current_user->hasRole('admin'))
-            <li>
-                <a href="{{ route('payment_methods.index') }}">
+            <li class="">
+                <a href="{{ route('payment_methods.index') }}" class="">
                     <i class="fa fa-money nav-icon"></i>
-                    Payment Method
+                    <span>  Payment Method </span>
                 </a>
 
             </li>
@@ -52,7 +52,7 @@ $current_user = auth()->user();
         <li>
             <a href="{{ route('investment_plans.index') }}">
                 <i class="fa fa-briefcase nav-icon"></i>
-                Investment Plans
+                <span> Investment Plans </span>
             </a>
 
         </li>
@@ -60,7 +60,7 @@ $current_user = auth()->user();
         <li>
             <a href="{{  $current_user->hasRole('admin') ? route('referals.index') : route('customer.referals') }}">
                 <i class="fa fa-users nav-icon"></i>
-                Referals
+                <span> Referals </span>
             </a>
         </li>
 
@@ -68,13 +68,13 @@ $current_user = auth()->user();
         <li>
             <a href="{{ $current_user->hasRole('admin') ? route('earnings.index') : route('customer.earnings')   }}">
                 <i class="fa fa-money nav-icon"></i>
-                Earnings
+                <span> Earnings </span>
             </a>
         </li>
         <li>
             <a href={{ $current_user->hasRole('customer') ? route('withdrawal') : route('withdrawals.index') }}>
                 <i class="fa fa-dollar nav-icon"></i>
-                Withdrawals
+                <span> Withdrawals </span>
             </a>
 
         </li>
@@ -82,7 +82,7 @@ $current_user = auth()->user();
             <li>
                 <a href="{{ route('users.index') }}">
                     <i class="fa fa-users nav-icon"></i>
-                    Users
+                    <span> Users </span>
                 </a>
             </li>
         @endif
@@ -99,7 +99,7 @@ $current_user = auth()->user();
                 onclick="event.preventDefault();
                               document.getElementById('logout-form').submit();">
                 <i class="fa fa-user nav-icon"></i>
-                logout
+                <span> logout </span>
             </a>
 
         </li>

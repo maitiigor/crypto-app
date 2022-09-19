@@ -29,12 +29,12 @@
     <div id="app">
         <div class="top-bar">
             <div class="top-left-bar">
-                welcome to crimish investment group
+                welcome to trade fund investment group
             </div>
             <div class="top-right-bar">
 
                 <a href="mailto:support@cimishfx-investment.com"> <i class="fa fa-envelope"></i>
-                    support@cimishfx-investment.com</a>
+                    support@tradefund-investment.com</a>
 
 
 

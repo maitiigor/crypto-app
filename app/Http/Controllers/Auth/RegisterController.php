@@ -77,6 +77,8 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
       
+        $user->syncRoles('customer');
+
         if(request()->input('ref_user')){
            
             $referer = User::where('user_name',request()->input('ref_user'))->first();
