@@ -85,7 +85,7 @@ class WithdrawalController extends Controller
     public function show(Withdrawal $withdrawal)
     {
         //
-        return view('pages.withdrawals.show');
+        return view('pages.withdrawals.show', compact('withdrawal'));
     }
 
     /**

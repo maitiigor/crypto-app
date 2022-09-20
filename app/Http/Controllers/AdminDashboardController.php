@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Deposit;
 use App\Models\Payment;
 use App\Models\PaymentMethod;
-use App\Models\Withdrawal;
 use App\Models\User;
+use App\Models\Withdrawal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Session;
@@ -26,6 +27,27 @@ class AdminDashboardController extends Controller
     {
 
         return view('admin.dashboard');
+    }
+
+    public function confirmDeposit(Request $request, $id)
+    {
+
+        $deposit = Deposit::find($id);
+
+        if ($deposit == null) {
+
+            Session::flash('error', 'Deposit not found');
+
+            return redirect(route('deposits.index'));
+        }
+
+        $deposit->is_verified = 1;
+
+        $deposit->save();
+
+        Session::flash('success', 'Deposit verification saved successfully');
+
+        return redirect(route('deposits.index'));
     }
 
     public function payWithdrawalRequest(Request $request, $id)
@@ -92,7 +114,6 @@ class AdminDashboardController extends Controller
                         $payment->save();
                         $extra_mesage = $payment->is_verfied ? "" : "But yet to be verified";
                         Session::flash('success', "Payment done successfully " . $extra_mesage);
-                      
 
                     } catch (\Illuminate\Http\Client\RequestException $th) {
                         //throw $th;
@@ -116,16 +137,17 @@ class AdminDashboardController extends Controller
         return redirect(route('withdrawals.index'));
     }
 
-    public function accountDisable(Request $request,$id){
+    public function accountDisable(Request $request, $id)
+    {
 
         $user = User::find($id);
 
-        if($request->status !=  null && $user != null){
+        if ($request->status != null && $user != null) {
 
-            if($request->status == 1 || $request->status == 0){
-                $user->is_disabled =  $request->status;
+            if ($request->status == 1 || $request->status == 0) {
+                $user->is_disabled = $request->status;
                 $user->save();
-                Session::flash('success','Account Updated successfully');
+                Session::flash('success', 'Account Updated successfully');
             }
         }
 

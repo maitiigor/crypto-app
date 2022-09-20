@@ -23,7 +23,7 @@
                         Total Deposit
                     </div>
                 </div>
-              
+
             </div>
             <div class="col-lg-4 mb-3 text-center rounded-lg text-middle align-middle">
                 <div class="rounded-3 py-2" style="height: 6em; background: #153d06;">
@@ -34,7 +34,7 @@
                         Total withdrawal
                     </div>
                 </div>
-               
+
             </div>
         </div>
         <div class="row justify-content-center p-2">
@@ -58,7 +58,7 @@
                         Total Blocked User
                     </div>
                 </div>
-              
+
             </div>
             <div class="col-lg-4 mb-3 text-center rounded-lg text-middle align-middle py-2">
                 <div class="rounded-3 py-2" style="height: 6em; background: #153d06;">
@@ -69,39 +69,118 @@
                         Total unverified User
                     </div>
                 </div>
-               
+
             </div>
         </div>
-        <div class="row justify-content-center mb-3">
-            <div class="col-lg-12">
-                <div style="min-height: 14em;" class="py-5">
-                    <div class="tradingview-widget-container">
-                        <div id="tradingview_167a7"></div>
-                        <div class="tradingview-widget-copyright"><a
-                                href="https://www.tradingview.com/symbols/BTCUSD/?exchange=COINBASE" rel="noopener"
-                                target="_blank"><span class="blue-text">Personal Trading Chat</span></a></div>
-                        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-                        <script type="text/javascript">
-                            new TradingView.widget({
-                                "width": "100%",
-                                "height": "550",
-                                "symbol": "COINBASE:BTCUSD",
-                                "interval": "D",
-                                "timezone": "Etc/UTC",
-                                "theme": "light",
+        <div class="row">
+            <div class="col-md-6">
 
-                                "style": "9",
-                                "locale": "en",
-                                "toolbar_bg": "#f1f3f6",
-                                "enable_publishing": false,
-                                "allow_symbol_change": true,
-                                "container_id": "tradingview_167a7"
-                            });
-                        </script>
+                <div class="card text-center">
+                    <div class="card-header text-dark">
+                        Pending Withdrawal Requests
                     </div>
-                    <!-- TradingView Widget END -->
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        User
+                                    </th>
+                                    <th>
+                                        Amount
+                                    </th>
+                                    <th>
+                                        Action
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if ($pending_withdrawal_request->count() > 0)
+                                    @foreach ($pending_withdrawal_request as $withdrawal_request)
+                                        <tr>
+                                            <td>
+                                                {{ $withdrawal_request->user->user_name }}
+                                            </td>
+                                            <td>
+                                                {{ $withdrawal_request->amount }}
+                                            </td>
+                                            <td>
+                                                <a href="{{ route('withdrawals.show', $withdrawal_request->id) }}">
+                                                    <button>
+                                                        <i class="fa fa-eye"></i>
+                                                    </button>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                @else
+                                        
+                                        <tr>
+                                            <td colspan="3">
+                                                No pending withdrawal request
+                                            </td>
+                                        </tr>
+                                @endif
+
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
 
+            </div>
+            <div class="col-md-6">
+                <div class="card text-center">
+                    <div class="card-header text-dark">
+                        Pending Deposit Requests
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        User
+                                    </th>
+                                    <th>
+                                        Amount
+                                    </th>
+                                    <th>
+                                        Action
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if ($pending_deposit_request->count() > 0)
+                                    @foreach ($pending_deposit_request as $deposit_request)
+                                        <tr>
+                                            <td>
+                                                {{ $withdrawal_request->user->user_name }}
+                                            </td>
+                                            <td>
+                                                {{ $withdrawal_request->amount }}
+                                            </td>
+                                            <td>
+                                                <a href="{{ route('deposits.show', $deposit_request->id) }}">
+                                                    <button>
+                                                        <i class="fa fa-eye"></i>
+                                                    </button>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                @else
+                                    <tr>
+                                        <td colspan="3">
+                                            No deposit pending verification
+                                        </td>
+                                    </tr>
+                                @endif
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>

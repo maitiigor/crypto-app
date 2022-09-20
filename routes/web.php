@@ -37,6 +37,7 @@ Route::middleware('auth')->group(function () {
     Route::middleware([IsAdmin::class])->group(function () {
         
         Route::get('/withdrawal/payment/{id}', [App\Http\Controllers\AdminDashboardController::class, 'payWithdrawalRequest'])->name('withdrawal.payment');
+        Route::get('/deposit/confirm/{id}', [App\Http\Controllers\AdminDashboardController::class, 'confirmDeposit'])->name('deposit.confirm');
         Route::resource('investment_plans', \App\Http\Controllers\InvestmentPlanController::class);
         Route::get('account/disable/{id}', [App\Http\Controllers\AdminDashboardController::class, 'accountDisable'])->name('account.disable');
         Route::resource('earnings', \App\Http\Controllers\EarningController::class);
