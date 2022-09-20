@@ -11,7 +11,7 @@
         << back to deposit list
      </a>
 </div>
-<div class="bg-light pt-5 pb-3 px-3 rounded" style="width: 100%;">
+<div class=" pt-5 pb-3 px-3 rounded" style="width: 100%; background-color: #a8ecec">
     <div class="row justify-content-center px-5">
 
         <div class="col-sm-12 text-dark">

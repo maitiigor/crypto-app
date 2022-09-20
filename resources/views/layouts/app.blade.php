@@ -25,8 +25,8 @@
 <body>
     <div id="app" style="width: 100%">
         <nav class="navbar navbar-expand-md shadow-sm">
-            <div class="container-fluid" style="background: #153d06">
-                <button style="background-color: #153d06; border: none;" id="nav-toggle-bar">
+            <div class="container-fluid" style="background: #057780">
+                <button style="background-color: #057780; border: none;" id="nav-toggle-bar">
                     <i class="fa fa-bars nav-icon"></i>
                 </button>
                 <a class="navbar-brand" href="{{ url('/') }}">

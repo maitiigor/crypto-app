@@ -92,9 +92,10 @@
         </div>
 
         <div class="row my-5 py-3 justify-content-center" style="padding-left: 50px; padding-right: 50px">
+            @foreach ($investment_plans as $investment_plan)
             <div class="col-md-3">
                 <div class="price green-bg text-center">
-                    <h3>ALPHA PLAN</h3>
+                    <h3>{{$investment_plan->name}}</h3>
                 </div>
                 <div class="plans">
                     <div class="" style="max-width: 100%">
@@ -102,128 +103,32 @@
                             class="img-responsive">
                     </div>
                     <h2>
-                        20% After 6 days
+                        {{$investment_plan->profit_percentage}} After {{$investment_plan->days_duration}} days
                     </h2>
                     <ul style="list-style: none" class="text-start">
                         <li>
-                            <h6 style="font-style: 14px"><i class="fa fa-plus" style="color: orange;"></i> Min Deposit: $50
+                            <h6 style="font-style: 14px"><i class="fa fa-plus" style="color: orange;"></i> Min Deposit: {{$investment_plan->amount}}
                             </h6>
                         </li>
                         <li>
-                            <h6><i class="fa fa-plus" style="color: orange;"></i> Max Deposit: $1500</h6>
+                            <h6><i class="fa fa-plus" style="color: orange;"></i> Max Deposit: {{$investment_plan->max_amount}}</h6>
                         </li>
                         <li>
                             <h6><i class="fa fa-plus" style="color: orange;"></i> Daily Earnings</h6>
                         </li>
                         <li>
-                            <h6><i class="fa fa-plus" style="color: orange;"></i> Insatant Withdrawals</h6>
+                            <h6><i class="fa fa-plus" style="color: orange;"></i> Instant Withdrawals</h6>
                         </li>
                         <li>
                             <h6><i class="fa fa-plus" style="color: orange;"></i> 100% Principal Return</h6>
                         </li>
                     </ul>
-                    <a href="{{ route('home') }}" class="my-3 custom-button">Deposit Now</a>
+                    <a href="{{ route('customer.deposit') }}" class="my-3 custom-button">Deposit Now</a>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="price green-bg text-center">
-                    <h3>BETA PLAN</h3>
-                </div>
-                <div class="plans">
-                    <div class="" style="max-width: 100%">
-                        <img src="{{ asset('assets/images/rocket.png') }}" alt="" style="width:200px; height: 200px"
-                            class="img-responsive">
-                    </div>
-                    <h2>
-                        40% After 14 days
-                    </h2>
-                    <ul style="list-style: none" class="text-start">
-                        <li>
-                            <h6 style="font-style: 14px"><i class="fa fa-plus" style="color: orange;"></i> Min Deposit: $1500
-                            </h6>
-                        </li>
-                        <li>
-                            <h6><i class="fa fa-plus" style="color: orange;"></i> Max Deposit: $4000</h6>
-                        </li>
-                        <li>
-                            <h6><i class="fa fa-plus" style="color: orange;"></i> Daily Earnings</h6>
-                        </li>
-                        <li>
-                            <h6><i class="fa fa-plus" style="color: orange;"></i> Insatant Withdrawals</h6>
-                        </li>
-                        <li>
-                            <h6><i class="fa fa-plus" style="color: orange;"></i> 100% Principal Return</h6>
-                        </li>
-                    </ul>
-                    <a href="{{ route('home') }}" class="my-3 custom-button">Deposit Now</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="price green-bg text-center">
-                    <h3>GAMA PLAN</h3>
-                </div>
-                <div class="plans">
-                    <div class="" style="max-width: 100%">
-                        <img src="{{ asset('assets/images/rocket.png') }}" alt=""
-                            style="width:200px; height: 200px" class="img-responsive">
-                    </div>
-                    <h2>
-                        60% After 10 days
-                    </h2>
-                    <ul style="list-style: none" class="text-start">
-                        <li>
-                            <h6 style="font-style: 14px"><i class="fa fa-plus" style="color: orange;"></i> Min Deposit:
-                                $4000</h6>
-                        </li>
-                        <li>
-                            <h6><i class="fa fa-plus" style="color: orange;"></i> Max Deposit: $1000</h6>
-                        </li>
-                        <li>
-                            <h6><i class="fa fa-plus" style="color: orange;"></i> Daily Earnings</h6>
-                        </li>
-                        <li>
-                            <h6><i class="fa fa-plus" style="color: orange;"></i> Insatant Withdrawals</h6>
-                        </li>
-                        <li>
-                            <h6><i class="fa fa-plus" style="color: orange;"></i> 100% Principal Return</h6>
-                        </li>
-                    </ul>
-                    <a href="#" class="my-3 custom-button">Deposit Now</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="price green-bg text-center">
-                    <h3>lEAD PLAN</h3>
-                </div>
-                <div class="plans">
-                    <div class="" style="max-width: 100%">
-                        <img src="{{ asset('assets/images/rocket.png') }}" alt=""
-                            style="width:200px; height: 200px" class="img-responsive">
-                    </div>
-                    <h2>
-                        100% After 15 days
-                    </h2>
-                    <ul style="list-style: none" class="text-start">
-                        <li>
-                            <h6 style="font-style: 14px"><i class="fa fa-plus" style="color: orange;"></i> Min Deposit:
-                                $10000</h6>
-                        </li>
-                        <li>
-                            <h6><i class="fa fa-plus" style="color: orange;"></i> Max Deposit: $25000</h6>
-                        </li>
-                        <li>
-                            <h6><i class="fa fa-plus" style="color: orange;"></i> Daily Earnings</h6>
-                        </li>
-                        <li>
-                            <h6><i class="fa fa-plus" style="color: orange;"></i> Insatant Withdrawals</h6>
-                        </li>
-                        <li>
-                            <h6><i class="fa fa-plus" style="color: orange;"></i> 100% Principal Return</h6>
-                        </li>
-                    </ul>
-                    <a href="#" class="my-3 custom-button">Deposit Now</a>
-                </div>
-            </div>
+            </div> 
+            @endforeach
+            
+            
         </div>
 
         <div class="row my-5 py-3 justify-content-center" style="padding-left: 50px; padding-right: 50px">

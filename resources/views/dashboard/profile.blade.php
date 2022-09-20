@@ -7,7 +7,7 @@
 @endphp
 @section('content')
     <div>
-        <div class="bg-light pt-5 px-3" style="height: 100%; width: 100%;">
+        <div class="pt-5 px-3 rounded" style="width: 100%; background-color: #a8ecec">
             {!! Form::open(array('url' => 'profile','method' => 'put')) !!}
             <div class="row py-2">
                

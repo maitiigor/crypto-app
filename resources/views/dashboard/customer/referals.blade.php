@@ -6,7 +6,7 @@
 @section('content')
 
     <div>
-        <div class="bg-light pt-5 px-3" style="width: 100%;">
+        <div class="pt-5 px-3 rounded" style="width: 100%; background-color: #a8ecec">
             <div class="row">
                 <div class="col-sm-8 text-dark">
                     Active referals

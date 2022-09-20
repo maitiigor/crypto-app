@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row justify-content-center p-2">
             <div class="col-lg-4 mb-3 text-center rounded-lg text-middle align-middle py-2">
-                <div class="rounded-3 py-2" style="height: 6em; background: #153d06;">
+                <div class="rounded-3 py-2" style="height: 6em; background: #057780;">
                     <div class="align-middle">
                         {{ $total_user_balance }}
                     </div>
@@ -15,7 +15,7 @@
 
             </div>
             <div class="col-lg-4 mb-3 text-center rounded-lg text-middle align-middle py-2">
-                <div class="rounded-3 py-2" style="height: 6em; background: #103104;">
+                <div class="rounded-3 py-2" style="height: 6em; background: #057780;">
                     <div class="align-middle">
                         {{ $total_deposit }}
                     </div>
@@ -26,7 +26,7 @@
 
             </div>
             <div class="col-lg-4 mb-3 text-center rounded-lg text-middle align-middle">
-                <div class="rounded-3 py-2" style="height: 6em; background: #153d06;">
+                <div class="rounded-3 py-2" style="height: 6em; background: #057780;">
                     <div class="align-middle">
                         {{ $total_withdrawal }}
                     </div>
@@ -39,7 +39,7 @@
         </div>
         <div class="row justify-content-center p-2">
             <div class="col-lg-4 mb-3 text-center rounded-lg text-middle align-middle py-2">
-                <div class="rounded-3 py-2" style="height: 6em; background: #153d06;">
+                <div class="rounded-3 py-2" style="height: 6em; background: #057780;">
                     <div class="align-middle">
                         {{ $total_user_balance }}
                     </div>
@@ -50,7 +50,7 @@
 
             </div>
             <div class="col-lg-4 mb-3 text-center rounded-lg text-middle align-middle py-2">
-                <div class="rounded-3 py-2" style="height: 6em; background: #153d06;">
+                <div class="rounded-3 py-2" style="height: 6em; background: #057780;">
                     <div class="align-middle">
                         {{ $total_deposit }}
                     </div>
@@ -61,7 +61,7 @@
 
             </div>
             <div class="col-lg-4 mb-3 text-center rounded-lg text-middle align-middle py-2">
-                <div class="rounded-3 py-2" style="height: 6em; background: #153d06;">
+                <div class="rounded-3 py-2" style="height: 6em; background: #057780;">
                     <div class="align-middle">
                         {{ $total_withdrawal }}
                     </div>
@@ -73,7 +73,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 mb-3">
 
                 <div class="card text-center">
                     <div class="card-header text-dark">
@@ -129,7 +129,7 @@
                 </div>
 
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mb-3">
                 <div class="card text-center">
                     <div class="card-header text-dark">
                         Pending Deposit Requests

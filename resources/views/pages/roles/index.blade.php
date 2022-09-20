@@ -10,7 +10,7 @@
             <i class="fa fa-plus"></i> Add Role
         </a>
     </div> --}}
-        <div class="bg-light pt-5 px-3" style="width: 100%;">
+    <div class="pt-5 px-3" style="width: 100%; background-color: #a8ecec">
             @include('pages.roles.table')
         </div>
     </div>

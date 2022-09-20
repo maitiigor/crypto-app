@@ -7,6 +7,7 @@ use App\Http\Requests\StoreContactRequest;
 use App\Models\Contact;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Models\InvestmentPlan;
 use Illuminate\Support\Facades\Http;
 use Session;
 
@@ -16,13 +17,10 @@ class FrontEndController extends Controller
     public function index(Request $request)
     {
         
-       if($request->ref){
-        
-            redirect(route('register',['ref' => $request->ref]));
-       }
+       $investment_plans = InvestmentPlan::all();
         
        
-        return view('welcome');
+        return view('welcome',compact('investment_plans'));
     }
 
     public function faq()

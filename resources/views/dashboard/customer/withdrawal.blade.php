@@ -5,7 +5,7 @@
 
 @section('content')
     <div>
-        <div class="bg-light pt-3 px-3" style="height: 100%; width: 100%;">
+        <div class="pt-5 px-3 rounded" style="width: 100%; background-color: #a8ecec">
             <div class="row pb-2">
                 <div class="col-lg-8 text-dark">
                     Account Balance

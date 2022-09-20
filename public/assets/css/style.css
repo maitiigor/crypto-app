@@ -3,7 +3,7 @@
     flex: 1 0 calc(0.18 * 100vw);
     border-radius: 2em;
     padding: 2em 0em 2em 0em;
-    background-color: #103104;
+    background-color: #057780;
     color: #ffff;
     transition: all 0.2s; box-sizing: border-box;  
     z-index: 1000;
@@ -50,7 +50,7 @@ main {
     border-radius: 2em;
     left: -1.3em;
     padding: 2em 0em 2em 0em;
-    background-color: #153d06;
+    background-color: #057780;
     color: #ffff;
     transition: all 0.2s;
     height: 100%; 
@@ -174,14 +174,14 @@ body {
     height: 16em;
     z-index: 30;
     margin-top: 1em;
-    background-color: #153d06;
+    background-color: #057780;
  }
 
 .navbar a{
     color: #c5cde9;
 }
 .navbar{
-    background-color: #153d06;
+    background-color: #057780;
     min-height: 5em
 }
 .navbar a:hover{
@@ -225,7 +225,10 @@ body a{
 } */
 
 .table-striped>tbody>tr:nth-of-type(odd) {
-    color: #be7b2e;
+    color: #051b99;
+}
+#dataTableBuilder_filter label{
+    color: #051b99;
 }
 
 .table-striped>tbody>tr:nth-of-type(even) {
