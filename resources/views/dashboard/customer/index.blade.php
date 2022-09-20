@@ -19,19 +19,19 @@
             <div class="col-md-12 my-2 py-5  text-center">
                 <span style="font-size: 14px" class="dashboard-history">
                     Account Balance ...
-                    <a href="#" style="font-size: 12px;">
+                    <a href="#" style="font-size: 14px; color:#030b30">
                         View History
                     </a>
                 </span>
                 <span style="font-size: 14px" class="dashboard-history">
                     &nbsp; Earned Total ...
-                    <a href="#" style="font-size: 12px;">
+                    <a href="#" style="font-size: 14px; color:#030b30">
                         View History
                     </a>
                 </span>
                 <span class="dashboard-history">
                     &nbsp; Ref Commission ...
-                    <a href="#" style="font-size: 12px;">
+                    <a href="#" style="font-size: 14px; color:#030b30">
                         View History
                     </a>
                 </span>

@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding:0;
-    background-color: #19233f;
+    background-color: #035482;/*  #19233f; */
     color: #ffff;
     width: 100vw;
     overflow-x: hidden;
@@ -49,7 +49,7 @@ nav a:hover{
 .navbar {
     padding-left: 5em;
     padding-right: 5em;
-    background-color: #19233f;
+    background-color: #035482;
 }
 @media only screen and (max-width: 768px) {
     .navbar{
@@ -73,7 +73,7 @@ nav a:hover{
 .footer{
     min-height: 10em;
     margin-bottom: 5em;
-    background-color: #161f36;
+    background-color: #005076;
     padding-top:  2em;
     padding-bottom: 2em;
 }
@@ -114,7 +114,7 @@ nav a:hover{
 }
 
 .app-bg-color1{
-    background-color: #1c2746;
+    background-color: #065892;
 }
 
 .custom-button:hover{
@@ -132,7 +132,7 @@ nav a:hover{
 }
 .box-container{
     padding: 25px 20px;
-    background-color: #1f2b4b;
+    background-color: #095d91;
     border: 1px dashed rgba(255,255,255,0.05);
     margin: 0 20px;
     border-radius: 15px;
@@ -172,7 +172,7 @@ nav a:hover{
 .plans {
     transition: .1s linear;
     border-radius: 20px;
-    background: #1c2746;
+    background: #065892;
     border: 1px solid rgba(255, 255, 255, 0.01);
     padding: 20px;
     width: auto;
@@ -197,22 +197,22 @@ p, li, a {
 }
 
 .box1{
-    background-color: #372fa1;
+    background-color: #1b60f6;
 }
 
 .box2{
-    background-color: #34a556;
+    background-color: #18d69b;
 }
 
 .box3{
-    background-color: #38b649
+    background-color: #1ce73e
 }
 
  .text-container {
     border-radius: 5px;
     padding: 30px 15px;
     text-align: center;
-    background: #1c2746;
+    background: #065892;
     margin: 0 10px;
     border-radius: 10px;
 }
@@ -230,21 +230,21 @@ p, li, a {
 
 .offset{
     margin-top: -100px;
-    background-color: #1c2746;
+    background-color: #065892;
     border-top: 2px solid orange;
 }
 
 .accordion-button{
-    background-color: #19233f;
+    background-color: #035482;;
     color: #fff;
 }
 .accordion-button:not(.collapsed) {
     color: #fff;
-    background-color: #19233f;
+    background-color: #035482;;
 }
 .accordion-item{
     color: #fff;
-    background-color: #19233f;
+    background-color: #035482;
     border-bottom: 1px solid #fff;
 }
 
@@ -274,7 +274,7 @@ p, li, a {
 }
 
 .contact-form-bg {
-    background: #1c2746;
+    background: #065892;
 }
 .custom-button{
     height: 50px;

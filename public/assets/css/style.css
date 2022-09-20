@@ -3,7 +3,7 @@
     flex: 1 0 calc(0.18 * 100vw);
     border-radius: 2em;
     padding: 2em 0em 2em 0em;
-    background-color: #0d42b2;
+    background-color: #103104;
     color: #ffff;
     transition: all 0.2s; box-sizing: border-box;  
     z-index: 1000;
@@ -48,14 +48,13 @@ main {
 .cps-nav-sidebar-hide{
     position: absolute;
     border-radius: 2em;
-    left: -6.3em;
+    left: -1.3em;
     padding: 2em 0em 2em 0em;
-    background-color: #0d42b2;
+    background-color: #153d06;
     color: #ffff;
     transition: all 0.2s;
     height: 100%; 
-    z-index: 1000;
-    
+    z-index: 1000;   
 }
 .nav-icon{
     color: #ffff;
@@ -66,9 +65,9 @@ main {
     color: #fff;
     margin-right: 0; 
     float: right;
-    padding-right: 10px;
-  
+    padding-right: 10px; 
 }
+
 .cps-nav-sidebar-hide .fa-chevron-left{
     display: none;
 }
@@ -145,7 +144,7 @@ main {
 body {
     overflow: hidden;
     height: 100vh;
-    background-color: #19233f;
+    background-color: #079ca7; /*  #19233f; */
     color: white;
 }
 .cps-nav-sidebar ul{
@@ -175,14 +174,14 @@ body {
     height: 16em;
     z-index: 30;
     margin-top: 1em;
-    background-color: #0d42b2;
+    background-color: #153d06;
  }
 
 .navbar a{
     color: #c5cde9;
 }
 .navbar{
-    background-color: #0d42b2;
+    background-color: #153d06;
     min-height: 5em
 }
 .navbar a:hover{
@@ -194,7 +193,7 @@ body {
 }
 
 .app-bg{
-    background-color: #19233f;
+    background-color: #035482;
     color: #c5cde9;
 }
 
@@ -238,13 +237,13 @@ body a{
 }
 
 #dataTableBuilder_processing{
-    background-color: #19233f;
+    background-color: #035482;
     color: #ffff;  
     text-align: center;
 }
 
 .app-bg{
-    background-color: #19233f;
+    background-color: #035482;
     color: #ffff;
 } 
 

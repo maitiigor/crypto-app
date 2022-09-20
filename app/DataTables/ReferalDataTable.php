@@ -18,7 +18,7 @@ class ReferalDataTable extends DataTable
     {
         $dataTable = new EloquentDataTable($query);
 
-        return $dataTable->addColumn('action', 'pages.referal.datatables_actions');
+        return $dataTable->addColumn('action', 'pages.referals.datatables_actions');
     }
 
     /**

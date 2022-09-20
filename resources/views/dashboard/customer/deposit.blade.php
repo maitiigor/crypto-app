@@ -76,7 +76,7 @@
                     </div>
     
                     <div class="mb-3">
-                        <label for="payment_method_id" class="form-label text-dark">Payment Method</label>
+                        <label for="payment_method" class="form-label text-dark">Payment Method</label>
                         <select name="payment_method" id="payment_method" class="form-select">
                             @foreach ($payment_methods as $item)
                                 <option value="{{ $item->account_id }}">
@@ -105,7 +105,7 @@
     $(document).ready(function () {
         let investment_plans = @php echo $investment_plans;@endphp;
 
-        $('#investment_plan_id').change(function(e) {
+       /*  $('#investment_plan_id').change(function(e) {
            let selected_plan_id = $(this).val();
            let plan = investment_plans.find(el =>{
                 return el.id == selected_plan_id;
@@ -114,7 +114,7 @@
            //$('#amount').attr('min',parseInt(plan.amount))
           
 
-        })
+        }) */
         
     })
 </script>

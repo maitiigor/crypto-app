@@ -17,7 +17,9 @@ class WithdrawalDataTable extends DataTable
     public function dataTable($query)
     {
         $dataTable = new EloquentDataTable($query);
-
+        $dataTable->addColumn('user',function($query){
+            return $query->user->name;
+        });
         $dataTable->addColumn('status',function($query){
             return $query->is_payed == true ? "paid" : "Pending";
         });
@@ -69,7 +71,7 @@ class WithdrawalDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'user_id',
+            'user',
            // 'label',
             'amount',
             'status'

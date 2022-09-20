@@ -18,7 +18,7 @@ class PaymentDataTable extends DataTable
     {
         $dataTable = new EloquentDataTable($query);
 
-        return $dataTable->addColumn('action', 'pages.payment.datatables_actions');
+        return $dataTable->addColumn('action', 'pages.payments.datatables_actions');
     }
 
     /**

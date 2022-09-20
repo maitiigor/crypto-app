@@ -26,7 +26,7 @@ class DepositDataTable extends DataTable
             
             return $query->investment_plan_id;
         });
-        return $dataTable->addColumn('action', 'pages.users.datatables_actions');
+        return $dataTable->addColumn('action', 'pages.deposits.datatables_actions');
     }
 
     /**

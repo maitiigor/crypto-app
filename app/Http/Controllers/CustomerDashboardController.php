@@ -3,15 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\DataTables\CustomerDepositDataTable;
+use App\Models\Deposit;
+use App\Http\Requests\StoreDepositRequest;
+use App\Http\Requests\UpdateDepositRequest;
+use App\Http\Requests\StoreWithdrawalRequest;
 use App\Models\Earning;
 use App\Models\InvestmentPlan;
 use App\Models\PaymentMethod;
-use App\Models\Deposit;
 use App\Models\User;
-use App\Models\Referal;
-use Session;
 use App\Models\Withdrawal;
 use Illuminate\Http\Request;
+use Session;
+use Illuminate\Support\Facades\Http;
+
 
 class CustomerDashboardController extends Controller
 {
@@ -45,13 +49,12 @@ class CustomerDashboardController extends Controller
         // return view('dashboard.customer.deposit-list',compact('investment_plans'));
     }
 
-    public function referals(Request $request){
+    public function referals(Request $request)
+    {
 
-        $referal_commissions = Earning::where('user_id',auth()->user()->id)->where('referal_id','!=',null)->get();
+        $referal_commissions = Earning::where('user_id', auth()->user()->id)->where('referal_id', '!=', null)->get();
 
-       
-
-        return view('dashboard.customer.referals',compact('referal_commissions'));
+        return view('dashboard.customer.referals', compact('referal_commissions'));
     }
 
     public function withdrawal(CustomerDepositDataTable $customerDepositDataTable)
@@ -140,14 +143,15 @@ class CustomerDashboardController extends Controller
 
     public function saveDeposit(StoreDepositRequest $request)
     {
-       
+
         $account_balance = auth()->user()->account_balance;
         $investment_plan = InvestmentPlan::find($request->investment_plan_id);
         $is_payment_from_account = true;
-        if ($account_balance == 0 || $account_balance < $request->amount) {
+        $payment_method = PaymentMethod::where('account_id', $request->payment_method)->first();
+        if ($account_balance == 0 || $account_balance < $request->amount && $payment_method != null) {
             $is_payment_from_account = false;
             $time = time();
-            $message = $time . "POST/v2/accounts/dd856131-e089-5ad7-a522-42a915549466/addresses" . json_encode([
+            $message = $time . "POST/v2/accounts/" . $payment_method->account_id . "/addresses" . json_encode([
                 'name' => " new address",
             ]);
             $signature = hash_hmac("SHA256", $message, env('COIN_BASE_SECRET'));
@@ -159,7 +163,7 @@ class CustomerDashboardController extends Controller
                     'CB-ACCESS-TIMESTAMP' => $time,
                     'CB-ACCESS-KEY' => env('COIN_BASE_KEY'),
                     'CB-VERSION' => '2022-09-06',
-                ])->acceptJson()->post('https://api.coinbase.com/v2/accounts/dd856131-e089-5ad7-a522-42a915549466/addresses', [
+                ])->acceptJson()->post('https://api.coinbase.com/v2/accounts/' . $payment_method->account_id . '/addresses', [
                     'name' => " new address",
                 ])->throw();
                 // dd($response->json());
@@ -171,7 +175,7 @@ class CustomerDashboardController extends Controller
                 $deposit->address_id = $res->data->id;
                 $deposit->address = $res->data->address;
                 $deposit->name = $res->data->name;
-                $deposit->currency = "BTC";
+                $deposit->currency = $payment_method->account_name;
                 $deposit->amount = $request->amount;
                 $deposit->network = $res->data->network;
                 $deposit->resource = $res->data->resource;
@@ -183,26 +187,34 @@ class CustomerDashboardController extends Controller
                 // $message = json_decode( );
                 Session::flash('error', "Something went wrong please try again");
 
-                return redirect(route('deposits.index'));
+                return redirect(route('customer.deposit'));
 
             }
         } else {
-            $user = User::find(auth()->user()->id);
-            if ($user != null) {
-                $deposit = new Deposit();
-                $deposit->investment_plan_id = $request->investment_plan_id;
-                $deposit->user_id = auth()->user()->id;
-                $deposit->name = "Deposit from account";
-                $deposit->currency = "BTC";
-                $deposit->amount = $request->amount;
-                $deposit->verified_amount = $request->amount;
-                $deposit->is_completed = 1;
-                $deposit->is_verification_passed = 1;
-                $deposit->save();
+            if ($payment_method != null) {
+                $user = User::find(auth()->user()->id);
+                if ($user != null) {
+                    $deposit = new Deposit();
+                    $deposit->investment_plan_id = $request->investment_plan_id;
+                    $deposit->user_id = auth()->user()->id;
+                    $deposit->name = "Deposit from account";
+                    $deposit->currency = "BTC";
+                    $deposit->amount = $request->amount;
+                    $deposit->verified_amount = $request->amount;
+                    $deposit->is_completed = 1;
+                    $deposit->is_verification_passed = 1;
+                    $deposit->save();
 
+                }
+                $user->account_balance = $user->account_balance - $request->amount;
+                $user->save();
+            } else {
+
+                Session::flash('error', "Something went wrong please try again");
+
+                return redirect(route('customer.deposit'));
             }
-            $user->account_balance = $user->account_balance - $request->amount;
-            $user->save();
+
         }
 
         $is_payment_from_account ? Session::flash('success', "Investment deposit successful") : Session::flash('success', "Success Voucher generated !!. Please make a deposit to this BTC address " . $deposit->address);

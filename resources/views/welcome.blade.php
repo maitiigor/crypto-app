@@ -27,7 +27,7 @@
         </div>
     </div>
     <div class="container-fluid px-5">
-        <div style="background: #1c2746">
+        <div style="background: #065892">
             <div class="row">
                 <div class="col-md-6">
                     <img src="{{ asset('assets/images/4.jpg') }}" class="img-responsive" alt="">
@@ -385,7 +385,7 @@
         </div>
 
     </div>
-    <div class="container-fluid px-5 pt-4" style="background-color: #1f2b4b">
+    <div class="container-fluid px-5 pt-4" style="background-color: #095d91">
 
         <div class="row">
             <div class="col-md-6">
@@ -397,7 +397,7 @@
                 </h2>
             </div>
         </div>
-        <div class="row py-4" style="background-color: #1c2746; opacity: 1;">
+        <div class="row py-4" style="background-color: #065892; opacity: 1;">
             <div class="col-md-6">
 
             </div>
@@ -408,7 +408,7 @@
                 <div class="row my-3">
                     <div class="col-sm-2">
                         <div class="rounded-circle"
-                            style="background-color: #1f2b4b; width: 40px; height: 40px; padding: 10px; color: orange">
+                            style="background-color: #095d91; width: 40px; height: 40px; padding: 10px; color: orange">
                             <i class="fa fa-check"></i>
                         </div>
 
@@ -424,7 +424,7 @@
                     <div class="row my-3">
                         <div class="col-sm-2">
                             <div class="rounded-circle"
-                                style="background-color: #1f2b4b; width: 40px; height: 40px; padding: 10px; color: orange">
+                                style="background-color: #095d91; width: 40px; height: 40px; padding: 10px; color: orange">
                                 <i class="fa fa-check"></i>
                             </div>
 
@@ -441,7 +441,7 @@
                     <div class="row my-3">
                         <div class="col-sm-2">
                             <div class="rounded-circle"
-                                style="background-color: #1f2b4b; width: 40px; height: 40px; padding: 10px; color: orange">
+                                style="background-color: #095d81; width: 40px; height: 40px; padding: 10px; color: orange">
                                 <i class="fa fa-check"></i>
                             </div>
 
@@ -554,7 +554,7 @@
                 <div class="text-container">
                     <div class="text-center px-5">
                         <div class="rounded-circle"
-                            style="background-color: #232f52; margin-top: -60px; padding:10px; width: 55px; height:55px;">
+                            style="background-color: #166485; margin-top: -60px; padding:10px; width: 55px; height:55px;">
                             <i class="fa fa-envelope fa-2x" style="
                             color: orange;"></i>
                         </div>
@@ -575,7 +575,7 @@
                 <div class="text-container">
                     <div class="text-center px-5">
                         <div class="rounded-circle "
-                            style="background-color: #232f52; margin-top: -60px; padding:10px; width: 55px; height:55px;">
+                            style="background-color: #166485; margin-top: -60px; padding:10px; width: 55px; height:55px;">
                             <i class="fa fa-rocket fa-2x" style="
                             color: orange;"></i>
                         </div>
@@ -596,7 +596,7 @@
                 <div class="text-container">
                     <div class="text-center px-5">
                         <div class="rounded-circle"
-                            style="background-color: #232f52; margin-top: -60px; padding:10px; width: 55px; height:55px;">
+                            style="background-color: #166485; margin-top: -60px; padding:10px; width: 55px; height:55px;">
                             <i class="fa fa-comment fa-2x" style="
                             color: orange;"></i>
                         </div>
@@ -617,7 +617,7 @@
                 <div class="text-container">
                     <div class="text-center px-5">
                         <div class="rounded-circle"
-                            style="background-color: #232f52; margin-top: -60px; padding:10px; width: 55px; height:55px;">
+                            style="background-color: #166485; margin-top: -60px; padding:10px; width: 55px; height:55px;">
                             <i class="fa fa-comment fa-2x" style="
                             color: orange;"></i>
                         </div>
@@ -641,7 +641,7 @@
                 <div class="text-container">
                     <div class="text-center px-5">
                         <div class="rounded-circle"
-                            style="background-color: #232f52; margin-top: -60px; padding:10px; width: 55px; height:55px;">
+                            style="background-color: #166485; margin-top: -60px; padding:10px; width: 55px; height:55px;">
                             <i class="fa fa-hdd-o fa-2x" aria-hidden="true"
                                 style="
                             color: orange;"></i>
@@ -663,7 +663,7 @@
                 <div class="text-container">
                     <div class="text-center px-5">
                         <div class="rounded-circle"
-                            style="background-color: #232f52; margin-top: -60px; padding:10px; width: 55px; height:55px;">
+                            style="background-color: #166485; margin-top: -60px; padding:10px; width: 55px; height:55px;">
                             <i class="fa fa-server fa-2x" style="
                             color: orange;"></i>
                         </div>
@@ -684,7 +684,7 @@
                 <div class="text-container">
                     <div class="text-center px-5">
                         <div class="rounded-circle"
-                            style="background-color: #232f52; margin-top: -60px; padding:10px; width: 55px; height:55px;">
+                            style="background-color: #166485; margin-top: -60px; padding:10px; width: 55px; height:55px;">
                             <i class="fa fa-database fa-2x" style="
                             color: orange;"></i>
                         </div>
@@ -705,7 +705,7 @@
                 <div class="text-container">
                     <div class="text-center px-5">
                         <div class="rounded-circle"
-                            style="background-color: #232f52; margin-top: -60px; padding:10px; width: 55px; height:55px;">
+                            style="background-color: #166485; margin-top: -60px; padding:10px; width: 55px; height:55px;">
                             <i class="fa fa-exchange fa-2x" style="
                             color: orange;"></i>
                         </div>
@@ -732,7 +732,7 @@
         </div>
 
         <div class="row py-3">
-            <div class="col-md-6 py-3" style=" background: #1c2746;">
+            <div class="col-md-6 py-3" style=" background: #065892;">
                 <h3 class="text-center">
                     Short FAQ
                 </h3>
@@ -846,7 +846,7 @@
                 </div>
             </div>
         </div>
-        <div class="row py-5 " style="background-color: #1c2746;">
+        <div class="row py-5 " style="background-color: #065892;">
             <div class="col-sm-12 my-4 text-center">
                 <h3>
                     Refferal Commission and Membership Level
@@ -907,7 +907,7 @@
                         <div class="carousel-item active">
                             <div class="row">
                                 <div class="col-md-6 px-4 text-center " style="margin-top: 100px">
-                                    <div class="py-3" style="background-color: #19233f;">
+                                    <div class="py-3" style="background-color: #035482;">
                                         <img src="{{ asset('assets/images/tes3.jpg') }}" class="rounded-circle" alt=""
                                             style="width: 80px; height: 80px; margin-top: -40px">
             
@@ -930,7 +930,7 @@
             
                                 </div>
                                 <div class="col-md-6 px-4 text-center " style="margin-top: 100px">
-                                    <div class="py-3" style="background-color: #19233f;">
+                                    <div class="py-3" style="background-color: #035482;">
                                         <img src="{{ asset('assets/images/tes3.jpg') }}" class="rounded-circle" alt=""
                                             style="width: 80px; height: 80px; margin-top: -40px">
             
@@ -955,7 +955,7 @@
                         <div class="carousel-item">
                             <div class="row">
                                 <div class="col-md-6 px-4 text-center " style="margin-top: 100px">
-                                    <div class="py-3" style="background-color: #19233f;">
+                                    <div class="py-3" style="background-color: #035482;">
                                         <img src="{{ asset('assets/images/tes3.jpg') }}" class="rounded-circle" alt=""
                                             style="width: 80px; height: 80px; margin-top: -40px">
             
@@ -978,7 +978,7 @@
             
                                 </div>
                                 <div class="col-md-6 px-4 text-center " style="margin-top: 100px">
-                                    <div class="py-3" style="background-color: #19233f;">
+                                    <div class="py-3" style="background-color: #035482;">
                                         <img src="{{ asset('assets/images/tes3.jpg') }}" class="rounded-circle" alt=""
                                             style="width: 80px; height: 80px; margin-top: -40px">
             
@@ -1002,7 +1002,7 @@
                         <div class="carousel-item">
                             <div class="row">
                                 <div class="col-md-6 px-4 text-center " style="margin-top: 100px">
-                                    <div class="py-3" style="background-color: #19233f;">
+                                    <div class="py-3" style="background-color: #035482;">
                                         <img src="{{ asset('assets/images/tes3.jpg') }}" class="rounded-circle" alt=""
                                             style="width: 80px; height: 80px; margin-top: -40px">
             
@@ -1025,7 +1025,7 @@
             
                                 </div>
                                 <div class="col-md-6 px-4 text-center " style="margin-top: 100px">
-                                    <div class="py-3" style="background-color: #19233f;">
+                                    <div class="py-3" style="background-color: #035482;">
                                         <img src="{{ asset('assets/images/tes3.jpg') }}" class="rounded-circle" alt=""
                                             style="width: 80px; height: 80px; margin-top: -40px">
             
@@ -1055,7 +1055,7 @@
 
 
             <div class="row mt-5">
-                <div class="col-sm-12 text-center py-5" style="background-color: #19233f;">
+                <div class="col-sm-12 text-center py-5" style="background-color: #035482;">
                     <h2>
                         Stats Table
                     </h2>

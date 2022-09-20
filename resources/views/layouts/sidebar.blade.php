@@ -5,16 +5,16 @@ $current_user = auth()->user();
     <ul>
         <li>
 
-            <a href="">
+            <a href="{{route('home')}}">
                 <i class="fa fa-dashboard nav-icon"></i>
-                Dashboard
+               <span>Dashboard</span>
             </a>
 
         </li>
         <li>
             <a href="#" class="dropdown-btn">
                 <i class="fa fa-money nav-icon"></i>
-                Deposit
+               <span>Deposit</span> 
                 <span class="text-light" style="margin-left: 45px"><i class="fa fa-chevron-left"></i></span>
             </a>
             <ul class="drop-downlist d-none">
