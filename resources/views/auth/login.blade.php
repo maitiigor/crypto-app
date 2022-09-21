@@ -1,6 +1,20 @@
 @extends('layouts.frontend-app')
 
 @section('content')
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-lg-12">
+            <div class="faq-title-conatiner px-5 py-5">
+                <h1>
+                    Login
+                </h1>
+            </div>
+
+        </div>
+    </div>
+</div>
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 py-2">
