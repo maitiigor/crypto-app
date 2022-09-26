@@ -8,15 +8,12 @@
                     WELCOME TO
                 </h1>
                 <div class="text-center" style="color: orange; font-weight: bolder">
-                    TradeFund-INVESTMENT
+                    TradeFunds-INVESTMENT
                 </div>
                 <div class="my-4" style="color: #d3dcf3">
                     <h4>Daily Profit + Principal Return</h4>
                     <p>
-                        TradeFund is a officially registered company at Germany Securities & Investments
-                        Commissions performing Trading in Crypto Currenices with a holder name of AKA Traders PTY LTD. OUR
-                        Company Germany Business Number is # 31642821082. We believe in hedge funds investments doing p2p
-                        trading and generating profits together.
+                        Tradefunds has partnered with the world’s best trading technology companies to bring you the ultimate trading experience and cutting-edge trading tools. These tools include: Depth of Market (DoM), inbuilt spread monitoring, ladder trading, automated close of trades with custom order templates, and more.
                     </p>
                 </div>
             </div>
@@ -26,27 +23,27 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid px-5">
+    <div class="px-2">
         <div style="background: #065892">
             <div class="row">
-                <div class="col-md-6">
-                    <img src="{{ asset('assets/images/4.jpg') }}" class="img-responsive" alt="">
+                <div class="col-md-6 p-4">
+                    <img src="{{ asset('assets/images/4.jpg') }}" class="img-fluid" alt="">
                 </div>
                 <div class="col-md-6">
                     <h1 class="px-4 mt-5">
                         Statistics
                     </h1>
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 my-2">
                             <div class="box-container text-center">
                                 <div class="box-title">
-                                    <h4><i class="fa fa-clock" style="color: orange"></i> Days Online</h4>
+                                    <h4><i class="fa fa-clock" style="color: orange"></i> Online Users</h4>
                                 </div>
                                 <h3>1774</h3>
                             </div>
                         </div>
 
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 my-2">
                             <div class="box-container text-center">
                                 <div class="box-title">
                                     <h4><i class="fa fa-user" style="color: orange"></i> Total Accounts</h4>
@@ -56,16 +53,16 @@
                         </div>
                     </div>
                     <div class="row my-3">
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 my-2">
                             <div class="box-container text-center">
                                 <div class="box-title">
-                                    <h4><i class="fa fa-arrow-up" style="color: orange"></i> Total Deposited</h4>
+                                    <h4><i class="fa fa-arrow-up" style="color: orange"></i> Total Deposit</h4>
                                 </div>
-                                <h3>$ 902604552</h3>
+                                <h3>$ 902604552+</h3>
                             </div>
                         </div>
 
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 my-2">
                             <div class="box-container text-center">
                                 <div class="box-title">
                                     <h4><i class="fa fa-arrow-down" style="color: orange"></i> Total withdrawal</h4>
@@ -83,17 +80,15 @@
                     Check out our latest Investment Packages
                 </h2>
                 <p class="" style="color: #96a1c2">
-                    TradeFund Team understands the security and safety of there investors funds That's why we are
-                    offering New range of Investment Packages with 100% Principal Return
-                </p>
+                    TradeFunds team understands the security and safety of there investors funds, that's why we are offering new range of investment packages with 100% principal returns
 
             </div>
 
         </div>
 
-        <div class="row my-5 py-3 justify-content-center" style="padding-left: 50px; padding-right: 50px">
+        <div class="row my-5 py-3 justify-content-center" style="padding-left: 2em; padding-right: 2em">
             @foreach ($investment_plans as $investment_plan)
-            <div class="col-md-3">
+            <div class="col-md-3 my-2">
                 <div class="price green-bg text-center">
                     <h3>{{$investment_plan->name}}</h3>
                 </div>
@@ -103,15 +98,15 @@
                             class="img-responsive">
                     </div>
                     <h2>
-                        {{$investment_plan->profit_percentage}} After {{$investment_plan->days_duration}} days
+                        {{$investment_plan->profit_percentage}}% After {{$investment_plan->days_duration}} days
                     </h2>
                     <ul style="list-style: none" class="text-start">
                         <li>
-                            <h6 style="font-style: 14px"><i class="fa fa-plus" style="color: orange;"></i> Min Deposit: {{$investment_plan->amount}}
+                            <h6 style="font-style: 14px"><i class="fa fa-plus" style="color: orange;"></i> Min Deposit: ${{$investment_plan->amount}}
                             </h6>
                         </li>
                         <li>
-                            <h6><i class="fa fa-plus" style="color: orange;"></i> Max Deposit: {{$investment_plan->max_amount}}</h6>
+                            <h6><i class="fa fa-plus" style="color: orange;"></i> Max Deposit: ${{$investment_plan->max_amount}}</h6>
                         </li>
                         <li>
                             <h6><i class="fa fa-plus" style="color: orange;"></i> Daily Earnings</h6>
@@ -142,11 +137,11 @@
                 </video>
             </div>
         </div>
-        <div class="row my-5 py-3 justify-content-center" style="padding-left: 50px; padding-right: 50px">
+        <div class="row my-5 py-3 justify-content-center" style="padding-left: 2em; padding-right: empx">
             <div class="col-lg-12">
                 <h2 class="text-center">
                     WHY CHOOSE<br>
-                    TradeFund
+                    TradeFunds
                 </h2>
 
             </div>
@@ -157,12 +152,12 @@
 
             </div>
         </div>
-        <div class="row my-5 py-3" style="padding-left: 50px; padding-right: 50px">
+        <div class="row my-5 py-3" style="padding-left: 2.5em; padding-right: 2.5em">
             <div class="col-md-6">
                 <div class="left-content">
                     <div class="features d-flex">
                         <div class="mt-2 mr-5 p-2">
-                            <i style="width: 55px; height:50px;color: orange; padding-top: 4px; border: 1px solid rgba(255, 255, 255, 0.1)"
+                            <i style="width: 55px; height:50px; color: orange; padding-top: 4px; border: 1px solid rgba(255, 255, 255, 0.1)"
                                 class="fa fa-paper-plane fa-2x  text-center align-middle"></i>
                         </div>
 
@@ -201,7 +196,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 y-2">
                 <div class="left-content">
                     <div class="features d-flex">
                         <div class="mt-2 mr-5 p-2">
@@ -223,7 +218,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6 my-2">
                 <div class="left-content">
                     <div class="features d-flex">
                         <div class="mt-2 mr-5 p-2">
@@ -244,12 +239,12 @@
                 </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6 my-2">
                 <div class="left-content">
                     <div class="features d-flex">
                         <div class="mt-2 mr-5 p-2">
                             <i style="width: 55px; height:50px;color: orange; padding-top: 4px; border: 1px solid rgba(255, 255, 255, 0.1)"
-                                class="fa fa-user-shield fa-2x  text-center align-middle"></i>
+                                class="fa fa-user fa-2x  text-center align-middle"></i>
                         </div>
 
                         <div class="ml-2" style="margin-left:10px">
@@ -266,7 +261,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6 my-2">
                 <div class="left-content">
                     <div class="features d-flex">
                         <div class="mt-2 mr-5 p-2">
@@ -355,17 +350,17 @@
                             <h3>
                                 WITHDRAW PROFITS
                             </h3>
-                            <p class="pl-3">
+                            <p class="">
                                 You can withdraw your balance at any time.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <img src="{{ asset('assets/images/off.jpg') }}" alt="">
+            <div class="col-md-6 my-2">
+                <img src="{{ asset('assets/images/off.jpg') }}" alt="" class="img-fluid">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 my-2">
                 <h2>
                     Our Services
                 </h2>
@@ -374,7 +369,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 my-2">
                 <div class="box-container box1 text-center">
                     <div ca>
                         <i class="fa fa-microchip"
@@ -399,7 +394,7 @@
             </div>
 
 
-            <div class="col-md-4">
+            <div class="col-md-4 my-2">
                 <div class="box-container box2 text-center">
                     <div ca>
                         <i class="fa fa-microchip"
@@ -421,7 +416,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 my-2">
                 <div class="box-container box3 text-center">
                     <div ca>
                         <i class="fa fa-user"
@@ -446,7 +441,7 @@
         <div class="row justify-content-center my-2">
             <div class="col-md-8 text-center">
                 <h2>
-                    CIMISHFX-INVESTMENT Offers Top of the line Services
+                    TRADEFUNDS-INVESTMENT Offers Top of the line Services
                 </h2>
                 <p>
                     we are giving offeres that no one is giving to there customers.
@@ -476,7 +471,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 my-2">
                 <div class="text-container">
                     <div class="text-center px-5">
                         <div class="rounded-circle "
@@ -497,7 +492,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 my-2">
                 <div class="text-container">
                     <div class="text-center px-5">
                         <div class="rounded-circle"
@@ -518,7 +513,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md-3 my-2">
                 <div class="text-container">
                     <div class="text-center px-5">
                         <div class="rounded-circle"
@@ -606,7 +601,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md-3 my-2">
                 <div class="text-container">
                     <div class="text-center px-5">
                         <div class="rounded-circle"
@@ -627,7 +622,7 @@
                 </div>
             </div>
 
-            <div class="col-md-12 text-center">
+            <div class="col-md-12 my-2 text-center">
 
 
                 <a href="btn btn-primary">
@@ -642,7 +637,7 @@
                     Short FAQ
                 </h3>
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 my-2">
                         <h6 style="color: #be7b2e ">
                             Do I need any trading skills?
                         </h6>
@@ -652,7 +647,7 @@
                             passive income, regardless of your knowledge or skills.
                         </p>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 my-2">
                         <h6 style="color: #be7b2e">
                             What minimum and maximum amount can I invest?
                         </h6>
@@ -661,7 +656,7 @@
                             cryptocurrencies, the declared amount will be converted at the current market exchange rate.
                         </p>
                     </div>
-                    <div class="col-sm-12">
+                    <div class="col-sm-12 my-2">
                         <h6 style="color: #be7b2e">
                             How long do I have to wait for withdrawal?
                         </h6>
@@ -672,7 +667,7 @@
                         </p>
                     </div>
 
-                    <div class="col-sm-12">
+                    <div class="col-sm-12 my-2">
                         <h6 style="color: #be7b2e">
                             Minimum withdrawal amount:
                         </h6>
@@ -687,7 +682,7 @@
             <div class="col-md-6"></div>
         </div>
         <div class="row my-5 py-3" style="padding-left: 50px; padding-right: 50px">
-            <div class="col-md-4">
+            <div class="col-md-4 my-2">
                 <div class="left-content">
                     <div class="features d-flex">
                         <div class="mt-2 mr-5 p-2">
@@ -708,7 +703,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4 my-2">
                 <div class="left-content">
                     <div class="features d-flex">
                         <div class="mt-2 mr-5 p-2">
@@ -730,7 +725,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4 my-2">
                 <div class="left-content">
                     <div class="features d-flex">
                         <div class="mt-2 mr-5 p-2">
@@ -818,7 +813,7 @@
             
                                         <div class="my-4 px-3">
                                             <blockquote>
-                                                Cimish-investment.com is a good broker, investment deposits and withdrawals service is
+                                               tradefunds-investment.com is a good broker, investment deposits and withdrawals service is
                                                 very
                                                 fast. Investment is nice on their web platform, i like this
                                             </blockquote>
@@ -841,7 +836,7 @@
             
                                         <div class="my-4 px-3">
                                             <blockquote>
-                                                Cimish-investment.com is a good broker, investment deposits and withdrawals service is
+                                                Tradefunds-investment.com is a good broker, investment deposits and withdrawals service is
                                                 very
                                                 fast. Investment is nice on their web platform, i like this
                                             </blockquote>
@@ -866,7 +861,7 @@
             
                                         <div class="my-4 px-3">
                                             <blockquote>
-                                                Cimish-investment.com is a good broker, investment deposits and withdrawals service is
+                                                Tradefunds-investment.com is a good broker, investment deposits and withdrawals service is
                                                 very
                                                 fast. Investment is nice on their web platform, i like this
                                             </blockquote>
@@ -889,7 +884,7 @@
             
                                         <div class="my-4 px-3">
                                             <blockquote>
-                                                Cimish-investment.com is a good broker, investment deposits and withdrawals service is
+                                                Tradefunds-investment.com is a good broker, investment deposits and withdrawals service is
                                                 very
                                                 fast. Investment is nice on their web platform, i like this
                                             </blockquote>
@@ -913,7 +908,7 @@
             
                                         <div class="my-4 px-3">
                                             <blockquote>
-                                                Cimish-investment.com is a good broker, investment deposits and withdrawals service is
+                                                Tradefunds-investment.com is a good broker, investment deposits and withdrawals service is
                                                 very
                                                 fast. Investment is nice on their web platform, i like this
                                             </blockquote>
@@ -936,7 +931,7 @@
             
                                         <div class="my-4 px-3">
                                             <blockquote>
-                                                Cimish-investment.com is a good broker, investment deposits and withdrawals service is
+                                                Tradefunds-investment.com is a good broker, investment deposits and withdrawals service is
                                                 very
                                                 fast. Investment is nice on their web platform, i like this
                                             </blockquote>
@@ -966,7 +961,7 @@
                     </h2>
                 </div>
             </div>
-            <div class="col-sm-12">
+            <div class="col-sm-12 my-4">
                 <div class="row" style="background-color: #be7b2e;">
                     <div class="col-sm-6  py-5 px-5">
                         <h2>
@@ -974,9 +969,9 @@
                         </h2>
 
                         It's never to late to start investing in Crypto Currencies with Hedge Funds Companies like
-                        Cimish-investment.com Germany Business Number is # 31642821092
+                        Tradefunds-investment.com Germany Business Number is # 31642821092
                     </div>
-                    <div class="col-sm-6 text-center py-5">
+                    <div class="col-sm-6 text-center py-3">
                         <h2>
                             <a href="#" class="btn btn-outline-secondary">Check Company's Certificate</a>
                         </h2>

@@ -4,7 +4,7 @@ body{
     background-color: #035482;/*  #19233f; */
     color: #ffff;
     width: 100vw;
-    overflow-x: hidden;
+
 }
 nav a{
     color: #c5cde9;
@@ -18,9 +18,12 @@ nav a:hover{
     height: 4em;
     display: flex;
     width: 100%;
-    color: #c5cde9;
     padding: 0.4em 6em 0.4em 6em;
-    color:  #c5cde9;
+    color:  #fff;
+    background-color: #be7b2e;
+}
+.top-bar a{
+    color:  #fff;
 }
 @media only screen and (max-width: 768px) {
     .top-bar{
@@ -131,7 +134,7 @@ nav a:hover{
     height: 200px;
 }
 .box-container{
-    padding: 25px 20px;
+    padding: 0.5em 0.5em;
     background-color: #095d91;
     border: 1px dashed rgba(255,255,255,0.05);
     margin: 0 20px;
@@ -183,7 +186,7 @@ nav a:hover{
 
 .left-content{
     border-right: 1px solid rgba(255, 255, 255, 0.1);
-    padding-right: 40px;
+    padding-right: 2em;
 }
 .features{
     margin-bottom: 40px;
@@ -281,7 +284,8 @@ p, li, a {
     background-color: #be7b2e;
     padding: 10px;
     color: white;
-    width: 220px;
+    min-width: 10em;
+    max-width: 15em;
     text-decoration: none;
     display: inline-block;
     text-align: center;
