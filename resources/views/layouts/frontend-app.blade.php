@@ -33,7 +33,7 @@
             </div>
             <div class="top-right-bar">
 
-                <a href="mailto:support@cimishfx-investment.com"> <i class="fa fa-envelope"></i>
+                <a href="mailto:support@trustfunds-investment.com"> <i class="fa fa-envelope"></i>
                     support@tradefunds-investment.com</a>
 
 
@@ -51,7 +51,7 @@
         <nav class="navbar navbar-expand-md shadow-sm" id="navbar">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{asset('assets/images/logo.png')}}" alt="" height="80" style="margin-top: -1.2em; margin-left: 0.8em"  class="position-absolute ml-3 d-inline-block align-text-top">
+                    <img src="{{asset('assets/images/logo.jpeg')}}" alt="" height="80" style="margin-top: -1.2em; margin-left: 0.8em"  class="position-absolute ml-3 d-inline-block align-text-top">
                   {{--   {{ config('app.name', 'Laravel') }} --}}
                 </a>
                 <button class="navbar-toggler" style="color: #fff;" type="button" data-bs-toggle="collapse"

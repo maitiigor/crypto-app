@@ -386,7 +386,7 @@
                         pocket sizes
                     </h6>
                     <div class="button">
-                        <a href="#" class="btn btn-outline-secondary btn-large" style="color: #fff;">Get more
+                        <a href="{{route('register')}}" class="btn btn-outline-secondary btn-large" style="color: #fff;">Get more
                             information</a>
                     </div>
                 </div>
@@ -404,14 +404,12 @@
                             color: #fff;
                        "></i>
                     </div>
-                    <h3>Crypto Investment</h3>
+                    <h3>Financial Planning</h3>
                     <h6 class="px-4" style="line-height: 1.5">
-                        At TradeFund.com, we are poised to take our investors to a higher level of financial
-                        independence. We achieve these with an array of carefully planned investment plans that suite all
-                        pocket sizes
+                        Financial planning is the task of determining how a business will afford to achieve its strategic goals and objectives. Usually, at Cimishfx-investment.com, we have a set of experienced financial experts that do this.
                     </h6>
                     <div class="button">
-                        <a href="#" class="btn btn-outline-secondary btn-large" style="color: #fff;">Get more
+                        <a href="{{route('register')}}" class="btn btn-outline-secondary btn-large" style="color: #fff;">Get more
                             information</a>
                     </div>
                 </div>
@@ -432,7 +430,7 @@
                         right time. The overall goal is to always smile home with good returns at the end of the day.
                     </h6>
                     <div class="button">
-                        <a href="#" class="btn btn-outline-secondary btn-large" style="color: #fff;">Get more
+                        <a href="{{route('register')}}" class="btn btn-outline-secondary btn-large" style="color: #fff;">Get more
                             information</a>
                     </div>
                 </div>
@@ -813,29 +811,6 @@
             
                                         <div class="my-4 px-3">
                                             <blockquote>
-                                               tradefunds-investment.com is a good broker, investment deposits and withdrawals service is
-                                                very
-                                                fast. Investment is nice on their web platform, i like this
-                                            </blockquote>
-                                            <br>
-                                            <div class="text-start">
-                                                - Luther Eklund
-                                            </div>
-            
-                                        </div>
-                                    </div>
-            
-            
-            
-            
-                                </div>
-                                <div class="col-md-6 px-4 text-center " style="margin-top: 100px">
-                                    <div class="py-3" style="background-color: #035482;">
-                                        <img src="{{ asset('assets/images/tes3.jpg') }}" class="rounded-circle" alt=""
-                                            style="width: 80px; height: 80px; margin-top: -40px">
-            
-                                        <div class="my-4 px-3">
-                                            <blockquote>
                                                 Tradefunds-investment.com is a good broker, investment deposits and withdrawals service is
                                                 very
                                                 fast. Investment is nice on their web platform, i like this
@@ -849,6 +824,28 @@
                                     </div>
             
                                 </div>
+                                <div class="col-md-6 px-4 text-center " style="margin-top: 100px">
+                                    <div class="py-3" style="background-color: #035482;">
+                                        <img src="{{ asset('assets/images/tes4.jpg') }}" class="rounded-circle" alt=""
+                                            style="width: 80px; height: 80px; margin-top: -40px">
+            
+                                        <div class="my-4 px-3">
+                                            <blockquote>
+                                                They are very responsive, open, and would go out of their way to assist. That is the most important bit for me. I haven't had any issues with the couple of withdrawals I've made so far, so it's a five from me
+                                            </blockquote>
+                                            <br>
+                                            <div class="text-start">
+                                                - Jules Ferrer
+                                            </div>
+            
+                                        </div>
+                                    </div>
+            
+            
+            
+            
+                                </div>
+                                
                             </div>
                             
                         </div>
@@ -856,18 +853,16 @@
                             <div class="row">
                                 <div class="col-md-6 px-4 text-center " style="margin-top: 100px">
                                     <div class="py-3" style="background-color: #035482;">
-                                        <img src="{{ asset('assets/images/tes3.jpg') }}" class="rounded-circle" alt=""
+                                        <img src="{{ asset('assets/images/tes1.jpg') }}" class="rounded-circle" alt=""
                                             style="width: 80px; height: 80px; margin-top: -40px">
             
                                         <div class="my-4 px-3">
                                             <blockquote>
-                                                Tradefunds-investment.com is a good broker, investment deposits and withdrawals service is
-                                                very
-                                                fast. Investment is nice on their web platform, i like this
+                                                Tradefunds-investment team is very professional, I have started to recommend to family, friends, and build my own team, to get passive income
                                             </blockquote>
                                             <br>
                                             <div class="text-start">
-                                                - Luther Eklund
+                                                - Mohammed Guti
                                             </div>
             
                                         </div>
@@ -879,18 +874,16 @@
                                 </div>
                                 <div class="col-md-6 px-4 text-center " style="margin-top: 100px">
                                     <div class="py-3" style="background-color: #035482;">
-                                        <img src="{{ asset('assets/images/tes3.jpg') }}" class="rounded-circle" alt=""
+                                        <img src="{{ asset('assets/images/tes2.jpg') }}" class="rounded-circle" alt=""
                                             style="width: 80px; height: 80px; margin-top: -40px">
             
                                         <div class="my-4 px-3">
                                             <blockquote>
-                                                Tradefunds-investment.com is a good broker, investment deposits and withdrawals service is
-                                                very
-                                                fast. Investment is nice on their web platform, i like this
+                                                They are everything I was looking for! Stable platform, fast deposit, and fast withdrawal, great and ultra-responsive customer support. To be honest, at first I didn't think that I would like their service, but I'm glad I gave them a chance and I'm enjoying their service a lot!
                                             </blockquote>
                                             <br>
                                             <div class="text-start">
-                                                - Luther Eklund
+                                                - Rose Berry
                                             </div>
             
                                         </div>
@@ -899,53 +892,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-6 px-4 text-center " style="margin-top: 100px">
-                                    <div class="py-3" style="background-color: #035482;">
-                                        <img src="{{ asset('assets/images/tes3.jpg') }}" class="rounded-circle" alt=""
-                                            style="width: 80px; height: 80px; margin-top: -40px">
-            
-                                        <div class="my-4 px-3">
-                                            <blockquote>
-                                                Tradefunds-investment.com is a good broker, investment deposits and withdrawals service is
-                                                very
-                                                fast. Investment is nice on their web platform, i like this
-                                            </blockquote>
-                                            <br>
-                                            <div class="text-start">
-                                                - Luther Eklund
-                                            </div>
-            
-                                        </div>
-                                    </div>
-            
-            
-            
-            
-                                </div>
-                                <div class="col-md-6 px-4 text-center " style="margin-top: 100px">
-                                    <div class="py-3" style="background-color: #035482;">
-                                        <img src="{{ asset('assets/images/tes3.jpg') }}" class="rounded-circle" alt=""
-                                            style="width: 80px; height: 80px; margin-top: -40px">
-            
-                                        <div class="my-4 px-3">
-                                            <blockquote>
-                                                Tradefunds-investment.com is a good broker, investment deposits and withdrawals service is
-                                                very
-                                                fast. Investment is nice on their web platform, i like this
-                                            </blockquote>
-                                            <br>
-                                            <div class="text-start">
-                                                - Luther Eklund
-                                            </div>
-            
-                                        </div>
-                                    </div>
-            
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
 
 
