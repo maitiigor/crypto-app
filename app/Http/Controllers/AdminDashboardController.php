@@ -25,7 +25,8 @@ class AdminDashboardController extends Controller
 
     public function index()
     {
-
+       // $is_payment_from_account = false;
+        
         return view('admin.dashboard');
     }
 

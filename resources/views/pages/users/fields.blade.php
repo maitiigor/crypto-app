@@ -26,6 +26,13 @@
 
         {!! Form::password('password',['class' =>'form-control']) !!}
     </div>
+
+    <div class="mb-3">
+        {!! Form::label('password_confirmation', 'Password Confirmation', ['class' => 'form-label']) !!}
+
+        {!! Form::password('password_confirmation',['class' =>'form-control']) !!}
+    </div>
+
     <div class="mb-3">
         {!! Form::label('bitcoin_account_id', 'Bitocoin Account ID', ['class' => 'form-label']) !!}
 

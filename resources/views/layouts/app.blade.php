@@ -41,7 +41,13 @@
                    {{--  <ul class="navbar-nav me-auto">
 
                     </ul> --}}
-
+                    <div id="google_translate_element"></div>
+                    <script type="text/javascript">// <![CDATA[
+                    function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                    }
+                    // ]]></script>
+                    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->

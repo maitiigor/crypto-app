@@ -7,6 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Notification;
 use App\Notifications\ContactCreatedNotification;
+use App\Models\User;
 
 class ContactMessageSentListener
 {
@@ -29,7 +30,10 @@ class ContactMessageSentListener
     public function handle(ContactMessageSentEvent $event)
     {
         //
-
-        Notification::send($event->contact, new ContactCreatedNotification($event->contact)); 
+        $user = User::where('email','admin@app.com')->first();
+        if($user != null){
+            Notification::send($user, new ContactCreatedNotification($event->contact));
+        }
+         
     }
 }

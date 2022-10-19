@@ -11,6 +11,9 @@
                 <option value="ETH"
                     {{ isset($paymentMethod) && $paymentMethod->account_name == 'ETH' ? 'selected' : '' }}>Ethereum
                 </option>
+                <option value="LTC"
+                    {{ isset($paymentMethod) && $paymentMethod->account_name == 'LTC' ? 'selected' : '' }}>LiteCoin
+                </option>
                 <option value="TRN"
                     {{ isset($paymentMethod) && $paymentMethod->account_name == 'TRN' ? 'selected' : '' }}>Tron</option>
             </select>

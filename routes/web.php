@@ -4,6 +4,7 @@ use App\Http\Middleware\IsAdmin;
 use App\Http\Middleware\IsDisabled;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\FrontEndController::class, 'index'])->name('index');
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth','verified'])->group(function () {
 
     Route::middleware([IsDisabled::class])->group(function () {
 
@@ -53,12 +54,16 @@ Route::middleware('auth')->group(function () {
     });
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 Route::get('/faqs', [App\Http\Controllers\FrontEndController::class, 'faq'])->name('faqs');
 Route::get('/rules', [App\Http\Controllers\FrontEndController::class, 'rules'])->name('rules');
 Route::get('/support', [App\Http\Controllers\FrontEndController::class, 'support'])->name('support');
 Route::post('/support', [App\Http\Controllers\FrontEndController::class, 'saveSupport'])->name('support.save');
 
-/* Route::get('sync-role', function () {
-    auth()->user()->syncRoles('admin');
-}); */
+Route::get('/clear-cache', function () {
+    Artisan::call('package:discover');
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    // Artisan::call('clear:complied');
+    return "Cache is cleared ... Check again";
+});

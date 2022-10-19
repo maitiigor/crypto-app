@@ -47,6 +47,13 @@
                
 
             </div>
+            <div id="google_translate_element"></div>
+<script type="text/javascript">// <![CDATA[
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+// ]]></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
         </div>
         <nav class="navbar navbar-expand-md shadow-sm" id="navbar">
             <div class="container-fluid">
@@ -182,7 +189,7 @@
 
         <div class="container px-3">
             <div class="col-md-8 px-3 py-3" style="font-size: 14px;">
-                Copyright @2022 trustfunds-investment.com All rights reserved
+                Copyright @2017 trustfunds-investment.com All rights reserved
             </div>
         </div>
 

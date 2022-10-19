@@ -102,12 +102,12 @@
                     </h2>
                     <ul style="list-style: none" class="text-start">
                         <li>
-                            <h6 style="font-style: 14px"><i class="fa fa-plus" style="color: orange;"></i> Min Deposit: ${{$investment_plan->amount}}
+                            <h6 style="font-style: 14px"><i class="fa fa-plus" style="color: orange;"></i> Min Deposit: ${{number_format($investment_plan->amount,2)}} and more
                             </h6>
                         </li>
-                        <li>
-                            <h6><i class="fa fa-plus" style="color: orange;"></i> Max Deposit: ${{$investment_plan->max_amount}}</h6>
-                        </li>
+                        {{-- <li>
+                            <h6><i class="fa fa-plus" style="color: orange;"></i> Max Deposit: ${{number_format($investment_plan->max_amount,2)}}</h6>
+                        </li> --}}
                         <li>
                             <h6><i class="fa fa-plus" style="color: orange;"></i> Daily Earnings</h6>
                         </li>
@@ -115,7 +115,7 @@
                             <h6><i class="fa fa-plus" style="color: orange;"></i> Instant Withdrawals</h6>
                         </li>
                         <li>
-                            <h6><i class="fa fa-plus" style="color: orange;"></i> 100% Principal Return</h6>
+                            <h6><i class="fa fa-plus" style="color: orange;"></i> {{$investment_plan->profit_percentage}}% Profit Return</h6>
                         </li>
                     </ul>
                     <a href="{{ route('customer.deposit') }}" class="my-3 custom-button">Deposit Now</a>
@@ -931,7 +931,7 @@
 @endsection
 @section('price-marquee')
     <div class="price-section"
-        style="background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; block-size:62px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F;padding:1px;padding: 0px; margin: 0px; width: 100%;">
+        style="background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; block-size:40px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F;padding:1px;padding: 0px; margin: 0px; width: 100%;">
         <div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe
                 src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&pref_coin_id=1505&invert_hover="
                 width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0"

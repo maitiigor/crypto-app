@@ -39,7 +39,8 @@ class NotificationController extends Controller
     {
         //
         if($request->type == 'wallet:addresses:new-payment'){
-            
+
+            \Log::info(json_encode($request->all()));
             $notification = new Notification();
             $notification->type = $request->type;
             $notification->notification_id = $request->data->id ;

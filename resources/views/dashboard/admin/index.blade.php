@@ -41,7 +41,7 @@
             <div class="col-lg-4 mb-3 text-center rounded-lg text-middle align-middle py-2">
                 <div class="rounded-3 py-2" style="height: 6em; background: #057780;">
                     <div class="align-middle">
-                        {{ $total_user_balance }}
+                        {{ $total_user }}
                     </div>
                     <div>
                         Total user
@@ -97,21 +97,24 @@
                             <tbody>
                                 @if ($pending_withdrawal_request->count() > 0)
                                     @foreach ($pending_withdrawal_request as $withdrawal_request)
-                                        <tr>
-                                            <td>
-                                                {{ $withdrawal_request->user->user_name }}
-                                            </td>
-                                            <td>
-                                                {{ $withdrawal_request->amount }}
-                                            </td>
-                                            <td>
-                                                <a href="{{ route('withdrawals.show', $withdrawal_request->id) }}">
-                                                    <button>
-                                                        <i class="fa fa-eye"></i>
-                                                    </button>
-                                                </a>
-                                            </td>
-                                        </tr>
+                                    @if ($withdrawal_request)
+                                    <tr>
+                                        <td>
+                                            {{ $withdrawal_request->user->user_name }}
+                                        </td>
+                                        <td>
+                                            {{ $withdrawal_request->amount }}
+                                        </td>
+                                        <td>
+                                            <a href="{{ route('withdrawals.show', $withdrawal_request->id) }}">
+                                                <button>
+                                                    <i class="fa fa-eye"></i>
+                                                </button>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    @endif
+                                       
                                     @endforeach
                                 @else
                                         
@@ -154,10 +157,10 @@
                                     @foreach ($pending_deposit_request as $deposit_request)
                                         <tr>
                                             <td>
-                                                {{ $withdrawal_request->user->user_name }}
+                                                {{ $deposit_request->user->user_name }}
                                             </td>
                                             <td>
-                                                {{ $withdrawal_request->amount }}
+                                                {{ $deposit_request->amount }}
                                             </td>
                                             <td>
                                                 <a href="{{ route('deposits.show', $deposit_request->id) }}">
