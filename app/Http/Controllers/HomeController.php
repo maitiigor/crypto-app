@@ -34,10 +34,12 @@ class HomeController extends Controller
             $total_deposit =    Deposit::all()->sum('verified_amount');
             $total_withdrawal = Withdrawal::all()->sum('amount');
             $total_user = User::all()->count();
+            $unverified_user =  User::where('email_verified_at', null)->count();
+            $blocked_user =  User::where('is_disabled', true)->count();
             $pending_withdrawal_request = Withdrawal::where('is_payed', false)->orderBy('created_at')->paginate('10');
             $pending_deposit_request = Deposit::where('is_verified', false)->orderBy('created_at')->paginate('10');
 
-            return view('dashboard.admin.index',compact('total_user_balance','total_deposit','total_withdrawal','pending_withdrawal_request','pending_deposit_request','total_user'));
+            return view('dashboard.admin.index',compact('total_user_balance','total_deposit','total_withdrawal','pending_withdrawal_request','pending_deposit_request','total_user','blocked_user','unverified_user'));
         }
         return view('dashboard.customer.index');
     }

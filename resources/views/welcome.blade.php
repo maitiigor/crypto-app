@@ -97,8 +97,33 @@
                         <img src="{{ asset('assets/images/rocket.png') }}" alt="" style="width:200px; height: 200px"
                             class="img-responsive">
                     </div>
+                    @php
+                        $investment_days = '';
+                        if($investment_plan->days_duration >= 30){
+                            if($investment_plan->days_duration == 30){
+                                $investment_days = "1 Month";
+                            }else{
+                                $month = floor($investment_plan->days_duration / 30);
+                                $days_cal = fmod($investment_plan->days_duration, 30);
+                                $month_sufix = "month";
+                                if($month > 1){
+                                    $month_sufix = "months";
+                                }
+                                $investment_days = $month." ".$month_sufix;
+                                $days = '';
+                                if($days_cal > 0 && is_numeric($days_cal)){
+                                    $days = $days_cal;
+                                    $investment_days = $month." ".$month_sufix." and ".$days." days";
+                                }
+                                
+                            }
+                        }else{
+                            $investment_days =  $investment_plan->days_duration. " days";
+                        }
+
+                    @endphp
                     <h2>
-                        {{$investment_plan->profit_percentage}}% After {{$investment_plan->days_duration}} days
+                        {{$investment_plan->profit_percentage}}% After {{$investment_days}}
                     </h2>
                     <ul style="list-style: none" class="text-start">
                         <li>

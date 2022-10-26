@@ -3,10 +3,9 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
-use App\Models\User;
 use App\Models\Referal;
-use App\Models\Earning;
+use App\Models\User;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -22,7 +21,7 @@ class RegisterController extends Controller
     | validation and creation. By default this controller uses a trait to
     | provide this functionality without requiring any additional code.
     |
-    */
+     */
 
     use RegistersUsers;
 
@@ -67,28 +66,30 @@ class RegisterController extends Controller
      * @return \App\Models\User
      */
     protected function create(array $data)
-    {   
-       
-      
+    {
+
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'user_name' => $data['user_name'],
             'password' => Hash::make($data['password']),
         ]);
-      
+
         $user->syncRoles('customer');
 
-        if(request()->input('ref_user')){
-           
-            $referer = User::where('user_name',request()->input('ref_user'))->first();
-          
-            if($referer != null){
-                $referal = new Referal();
-                $referal->referer_user_id = $referer->id ;
-                $referal->refered_user_id =  $user->id;
-                $referal->save();
+        if (request()->input('ref_user')) {
 
+            $referer = User::where('user_name', request()->input('ref_user'))->first();
+
+            if ($referer != null) {
+                $referal = new Referal();
+                $referal->referer_user_id = $referer->id;
+                $referal->refered_user_id = $user->id;
+                $referal->save();
+                
+                $user->is_refered = 1;
+                $user->save();
+                /*
                 $earning = new Earning();
 
                 $earning->user_id = $referer->id;
@@ -97,12 +98,9 @@ class RegisterController extends Controller
                 $earning->save();
 
                 $referer->account_balance = $referer->account_balance + 10 ;
-                $referer->save();
+                $referer->save(); */
             }
         }
-
-
-        
 
         return $user;
     }

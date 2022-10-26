@@ -10,6 +10,7 @@ use App\Models\Withdrawal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Session;
+use  App\Events\WithdrawalPaidEvent;
 
 class AdminDashboardController extends Controller
 {
@@ -69,19 +70,18 @@ class AdminDashboardController extends Controller
                     'CB-ACCESS-KEY' => env('COIN_BASE_KEY'),
                     'CB-VERSION' => '2022-09-06',
                 ])->acceptJson()->get('https://api.coinbase.com/v2/exchange-rates')->throw()->json();
-                // dd($response->json());
-                //$res = json_decode($response->body());
+               
                 $exchange_rate = $response['data']['rates'][$withdrawal->address_type];
 
                 $payment_amount = $exchange_rate * $withdrawal->amount;
 
-                $payment_method = PaymentMethod::where('account_name', $withdrawal->account_type)->first();
-
+                $payment_method = PaymentMethod::where('account_name', $withdrawal->address_type)->first();
+                
                 if ($payment_method != null) {
 
                     try {
                         //code...
-                        $time = time();
+                         $time = time();
                         $post_data = [
                             "type" => "send",
                             "to" => $withdrawal->address,
@@ -98,26 +98,32 @@ class AdminDashboardController extends Controller
                             'CB-VERSION' => '2022-09-06',
                         ])->acceptJson()->get('https://api.coinbase.com/v2/accounts/' . $payment_method->account_id . '/transactions')->throw();
 
-                        $res = json_decode($response->body());
+                        $res = json_decode($response->body()); 
 
                         $payment = new Payment();
 
                         $payment->withdrawal_id = $withdrawal->id;
                         $payment->amount = $withdrawal->amount;
-                        $payment->gateway_reference_code = $res->data->id;
+                        $payment->gateway_reference_code =  $res->data->id;
                         $payment->gateway_name = "coinbase";
                         $payment->gateway_url = $res->data->resource_path;
-                        if ($res->data->status == "pending") {
+                        if (/* $res->data->status */ "pending" == "pending") {
                             $payment->is_verified = 0;
                         } else {
                             $payment->is_verified = 1;
                         }
                         $payment->save();
+                        $withdrawal->is_payed = 1;
+                        $withdrawal->save();
                         $extra_mesage = $payment->is_verfied ? "" : "But yet to be verified";
+                        
                         Session::flash('success', "Payment done successfully " . $extra_mesage);
+                       
+                        WithdrawalPaidEvent::dispatch($payment);
 
                     } catch (\Illuminate\Http\Client\RequestException $th) {
-                        //throw $th;
+                        
+                      
                         Session::flash('error', "Something went wrong please try again");
                         return redirect(route('withdrawals.index'));
                     }
@@ -125,8 +131,8 @@ class AdminDashboardController extends Controller
                 }
 
             } catch (\Illuminate\Http\Client\RequestException $th) {
-                //throw $th;
-                // $message = json_decode( );
+               
+             
                 Session::flash('error', "Something went wrong please try again");
 
                 return redirect(route('withdrawals.index'));
@@ -134,7 +140,7 @@ class AdminDashboardController extends Controller
             }
 
         }
-
+      //  dd( $th->getMessage());
         return redirect(route('withdrawals.index'));
     }
 

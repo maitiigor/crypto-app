@@ -59,7 +59,7 @@ Route::get('/faqs', [App\Http\Controllers\FrontEndController::class, 'faq'])->na
 Route::get('/rules', [App\Http\Controllers\FrontEndController::class, 'rules'])->name('rules');
 Route::get('/support', [App\Http\Controllers\FrontEndController::class, 'support'])->name('support');
 Route::post('/support', [App\Http\Controllers\FrontEndController::class, 'saveSupport'])->name('support.save');
-
+Route::resource('notifications', \App\Http\Controllers\NotificationController::class);
 Route::get('/clear-cache', function () {
     Artisan::call('package:discover');
     Artisan::call('cache:clear');

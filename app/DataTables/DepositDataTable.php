@@ -17,14 +17,14 @@ class DepositDataTable extends DataTable
     public function dataTable($query)
     {
         $dataTable = new EloquentDataTable($query);
-        $dataTable->addColumn('user_id', function($query){
+        $dataTable->addColumn('user_name', function($query){
             
-            return $query->user_id;
+            return $query->user->name;
         });
 
-        $dataTable->addColumn('investment_plan_id', function($query){
+        $dataTable->addColumn('investment_plan', function($query){
             
-            return $query->investment_plan_id;
+            return $query->investment_plan->name;
         });
         return $dataTable->addColumn('action', 'pages.deposits.datatables_actions');
     }
@@ -74,8 +74,8 @@ class DepositDataTable extends DataTable
     {
         return [
             'amount',
-            'investment_plan_id',
-            'user_id',
+            'investment_plan',
+            'user_name',
         ];
     }
 

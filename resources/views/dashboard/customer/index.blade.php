@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12 text-center">
                 <h3> Active Deposit <br>
-                    $0.0<br>
+                    ${{number_format( auth()->user()->account_balance, 2 ) }}<br>
                 </h3>
                 <div class="py-4">
                     <a href="{{route('customer.deposit')}}" class="btn custom-btn" type="btn">

@@ -62,7 +62,7 @@
                 @endif
 
             </div>
-            <div class="px-2 mb-3" style="width: 100%; background-color: white; color: #19233f; margin-top: 4em">
+            <div class="px-2 py-2 mb-3" style="width: 100%; background-color: white; color: #19233f; margin-top: 4em">
                 <table class="table text-dark">
                     <thead>
                         <tr class="text-dark">

@@ -21,11 +21,18 @@
                         <tbody>
                             @foreach ($earnings as $earning)
                                 <tr class="text-dark">
-
+                                    @if($earning->investment_plan)
+                                        <td>
+                                            <strong> {{$earning->investment_plan->name}} </strong><br>
+                                            Amount_invested: {{number_format($earning->deposit->amount,2)}}
+                                        </td>
+                                    @else
                                     <td>
-                                       <strong> {{$earning->investment_plan->name}} </strong><br>
-                                        Amount_invested: {{number_format($earning->deposit->amount,2)}}
+                                        <strong> Referal Bonous</strong><br>
+                                        ({{$earning->referal->refered_user->name}})
                                     </td>
+                                    @endif
+                                    
                                     <td>{{ $earning->amount }}</td>
                                     <td>{{ $earning->created_at }}</td>
                                 </tr>

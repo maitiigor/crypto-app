@@ -63,7 +63,7 @@
             <div class="col-lg-4 mb-3 text-center rounded-lg text-middle align-middle py-2">
                 <div class="rounded-3 py-2" style="height: 6em; background: #057780;">
                     <div class="align-middle">
-                        {{ $total_withdrawal }}
+                        {{  $unverified_user }}
                     </div>
                     <div>
                         Total unverified User
