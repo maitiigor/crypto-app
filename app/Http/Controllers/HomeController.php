@@ -41,7 +41,8 @@ class HomeController extends Controller
 
             return view('dashboard.admin.index',compact('total_user_balance','total_deposit','total_withdrawal','pending_withdrawal_request','pending_deposit_request','total_user','blocked_user','unverified_user'));
         }
-        return view('dashboard.customer.index');
+        $total_deposit =    Deposit::where('user_id',auth()->user()->id)->where('is_investment_period_completed', false)->where('is_verified',true)->sum('amount');
+        return view('dashboard.customer.index',compact('total_deposit'));
     }
 
     public function profile()

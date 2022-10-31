@@ -57,6 +57,12 @@
                     Approve and Pay
                 </a>
             </div>
+
+            <div class="col-sm-3 text-dark py-2">
+                <a href="{{ route('withdrawal.fake', $withdrawal->id) }}" class="btn btn-warning">
+                    Fake Payment
+                </a>
+            </div>
         @endif
 
     </div>

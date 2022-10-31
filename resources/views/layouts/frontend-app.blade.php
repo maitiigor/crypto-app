@@ -181,6 +181,9 @@ new google.translate.TranslateElement({pageLanguage: 'en', layout: google.transl
                         </ul>
 
                     </div>
+                    <div class="col-sm-12">
+                       Registered Office Address: Gesine-Stumpf-Ring 73, Kaarst, Germany
+                    </div>
                 </div>
 
             </div>

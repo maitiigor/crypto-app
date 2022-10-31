@@ -27,8 +27,8 @@
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>Does Tradefunds investment have any liability to the investor?</strong><br>
-                  Yes, the company is under the government regulator Companies House.
+                  <strong></strong><br>
+                  Tradefunds is an international investment company based in Germany.
                 </div>
               </div>
             </div>

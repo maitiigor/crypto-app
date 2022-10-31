@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12 text-center">
                 <h3> Active Deposit <br>
-                    ${{number_format( auth()->user()->account_balance, 2 ) }}<br>
+                    ${{$total_deposit}}<br>
                 </h3>
                 <div class="py-4">
                     <a href="{{route('customer.deposit')}}" class="btn custom-btn" type="btn">
@@ -18,20 +18,17 @@
             </div>
             <div class="col-md-12 my-2 py-5  text-center">
                 <span style="font-size: 14px" class="dashboard-history">
-                    Account Balance ...
-                    <a href="#" style="font-size: 14px; color:#030b30">
-                        View History
-                    </a>
+                    Account Balance :  ${{number_format( auth()->user()->account_balance, 2 ) }}<br>                  
                 </span>
                 <span style="font-size: 14px" class="dashboard-history">
                     &nbsp; Earned Total ...
-                    <a href="#" style="font-size: 14px; color:#030b30">
+                    <a href="{{route('customer.earnings')}}" style="font-size: 14px; color:#030b30">
                         View History
                     </a>
                 </span>
                 <span class="dashboard-history">
                     &nbsp; Ref Commission ...
-                    <a href="#" style="font-size: 14px; color:#030b30">
+                    <a href="{{route('customer.earnings')}}" style="font-size: 14px; color:#030b30">
                         View History
                     </a>
                 </span>

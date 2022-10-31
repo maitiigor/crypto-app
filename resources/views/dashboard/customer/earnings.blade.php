@@ -28,7 +28,7 @@
                                         </td>
                                     @else
                                     <td>
-                                        <strong> Referal Bonous</strong><br>
+                                        <strong> Referal Bonus</strong><br>
                                         ({{$earning->referal->refered_user->name}})
                                     </td>
                                     @endif
