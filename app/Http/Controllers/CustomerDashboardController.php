@@ -185,6 +185,7 @@ class CustomerDashboardController extends Controller
             } catch (\Illuminate\Http\Client\RequestException $th) {
                 //throw $th;
                 // $message = json_decode( );
+                \Log::info($th->getMessage());
                 Session::flash('error', "Something went wrong please try again");
 
                 return redirect(route('customer.deposit'));
@@ -200,9 +201,10 @@ class CustomerDashboardController extends Controller
                     $deposit->name = "Deposit from account";
                     $deposit->currency = "BTC";
                     $deposit->amount = $request->amount;
-                    $deposit->verified_amount = $request->amount;
-                    $deposit->is_completed = 1;
-                    $deposit->is_verification_passed = 1;
+                   // $deposit->verified_amount = $request->amount;
+                   /*  $deposit->is_completed = 0;
+                    $deposit->is_verified = 0;
+                    $deposit->is_verification_passed = 0; */
                     $deposit->save();
 
                 }

@@ -945,7 +945,7 @@
                     </div>
                     <div class="col-sm-6 text-center py-3">
                         <h2>
-                            <a href="#" class="btn btn-outline-secondary">Check Company's Certificate</a>
+                            <a href="{{asset('assets/images/tradefunds-investment-certificate.jpeg')}}" target="_blank" class="btn btn-outline-secondary">Check Company's Certificate</a>
                         </h2>
                     </div>
                 </div>

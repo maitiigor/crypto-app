@@ -9,6 +9,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use App\Events\UserReferedEvent;
 
 class RegisterController extends Controller
 {
@@ -89,16 +90,9 @@ class RegisterController extends Controller
                 
                 $user->is_refered = 1;
                 $user->save();
-                /*
-                $earning = new Earning();
-
-                $earning->user_id = $referer->id;
-                $earning->amount = "10";
-                $earning->referal_id = $referal->id;
-                $earning->save();
-
-                $referer->account_balance = $referer->account_balance + 10 ;
-                $referer->save(); */
+                 
+                UserReferedEvent::dispatch($referal);
+                
             }
         }
 

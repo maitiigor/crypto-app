@@ -38,7 +38,7 @@ class DepositDataTable extends DataTable
     public function query(Deposit $model)
     {
        
-        return $model->newQuery();
+        return $model->newQuery()->orderBy('created_at','DESC');
     }
 
     /**

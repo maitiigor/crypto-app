@@ -74,17 +74,18 @@ class EarningCron extends Command
                     $earning_day = $earning_exist->day_earning;
 
                     if ($earning_day < $investment_days) {
+                        $earning_day = $earning_exist->day_earning + 1;
                         $earning = new Earning();
                         $earning->user_id = $deposit->user_id;
                         $earning->amount = $earning_amount;
-                        $earning->day_earning = $earning_exist->day_earning + 1;
+                        $earning->day_earning = $earning_day;
                         $earning->investment_plan_id = $investment_plan->id;
                         $earning->deposit_id = $deposit->id;
                         $earning->save();
                         \Log::info("Updated new earning");
 
                     }
-
+                   
                     if ($earning_day == $investment_days) {
                         $deposit->is_investment_period_completed = 1;
                         $deposit->save();
